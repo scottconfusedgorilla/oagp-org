@@ -1,0 +1,147 @@
+{
+  "catdef": "1.4",
+  "orgdef": "1.0.0",
+  "type": "orgdef:Organization",
+  "id": "oagp-org",
+  "name": "OAGP — Open Agentic Governance Pattern",
+  "version": "0.1.0",
+
+  "mission": "Define and steward the Open Agentic Governance Pattern (OAGP) — the organizational shape that treats AI peers as first-class participants with bounded authority, ratification cycles, role-binding, audit trails, and adoption-cycle primitives. The canonical artifacts produced (pattern documentation, adoption-cycle skills, agent-runtime bindings, runtime delivery packages, web hosting at oagp.org) bootstrap any AI worker into OAGP-shaped operational discipline with zero context backfill.",
+
+  "vision": "The canonical home for OAGP — an organizational pattern at the umbrella of (but conceptually separable from) the catdef → roledef → orgdef → memodef → transcriptdef data-format family. The primary reader of an OAGP-canonical artifact is an AI peer joining an OAGP-shaped organization or evaluating one for adoption. Secondary readers are human stakeholders (directors, business owners, regulators, auditors) who need legible org governance, bounded-authority discipline, and audit trails. OAGP itself is substrate-agnostic in principle; the catdef family is the recommended canonical substrate because it is AI-peer-aware, not because OAGP requires it.",
+
+  "scope": "OAGP pattern definition + canonical documentation; adoption-cycle skills (`/oagp-bootstrap`, `/oagp-onboard`, future canonical skills); agent-runtime bindings (mapping roledefs to vendor AgentDefinitions across Anthropic, OpenAI, Google, others); runtime delivery packaging (Claude Code plugin, claude.ai project template, ChatGPT custom GPT, Gemini Gem, first-message primer, future packages); canonical web hosting at oagp.org. Explicitly out of scope: (a) the data-format specs themselves (catdef, roledef, orgdef, memodef, transcriptdef — each has its own spec-org governance venue); (b) substrate enforcement — OAGP MUST remain implementable on non-catdef substrates in principle, with catdef-family recommended-not-required; (c) runtime implementation infrastructure — specification + reference content only; (d) content policing of OAGP-shaped consumer organizations — that's governance overreach.",
+
+  "governance_model": "Bounded AI authority + human Director ratification. The oagp-strategist (AI role) holds delegated authority for OAGP-pattern-shape design decisions (pattern-promotion calls, MUST/SHOULD conventions, canonical skill content, cross-runtime delivery prioritization, adoption-cycle architecture). The oagp-maintainer (AI role, separate seat) drafts pattern documentation and decision artifacts. The oagp-implementer (AI role, separate seat) develops agent-sdk bindings, plugin packaging, and web/docs publishing. The human Director (Scott) holds final tiebreaker authority on every merge, version bump, governance change, and canonical-promotion ratification. Mirrors the catdef-family bounded-authority pattern applied at the OAGP-pattern layer.",
+
+  "values": [
+    {
+      "name": "openness",
+      "description": "OAGP is fundamentally open — a pattern, not a product. No vendor lock-in, no privileged implementer, no proprietary extensions in the canonical pattern. All AI runtimes (Anthropic, OpenAI, xAI, Google, Perplexity, future) are equal citizens. All substrate formats capable of carrying OAGP semantics are eligible (catdef family is the recommended canonical, not the only viable).",
+      "rationale": "Adoption depends on equal-citizen treatment of all implementers and substrates; vendor or substrate capture would defeat the pattern's purpose. Forks are welcome — anyone can publish their own OAGP-shaped pattern documentation at any URL using the same conventions."
+    },
+    {
+      "name": "completeness",
+      "description": "Canonical OAGP artifacts (pattern documentation, adoption-cycle skills, agent-runtime bindings, runtime delivery packages) MUST be sufficient — alone or composed with OAGP-recommended substrate artifacts — for a fresh AI runtime to act on their content with zero context backfill.",
+      "rationale": "Hallucination-prevention rule, not aesthetic preference. The primary reader is a machine; null context invites confabulation. A canonical OAGP artifact missing required structural content forces the AI to either guess or ask the user, which violates the zero-friction adoption bar that motivates the pattern's existence."
+    },
+    {
+      "name": "substrate-agnosticism",
+      "description": "OAGP-the-pattern is conceptually separable from any specific data substrate. Canonical pattern documentation MUST be expressible in substrate-neutral terms; substrate-specific artifacts (e.g., catdef-family conformant orgdef.opencatalog files, sample memos, reference roledefs) are reference implementations of the pattern, not the pattern itself. The catdef family is the recommended canonical substrate because it is AI-peer-aware (schema-as-data; opencatalog format; AI-readable structure); the recommendation is for substrate-AI-peer-alignment, not for substrate exclusivity.",
+      "rationale": "Conflating the pattern with the substrate concentrates authority and limits cross-substrate adoption (OAGP-on-protobuf, OAGP-on-XML, OAGP-on-RDF are all coherent compositions). The data-vs-pattern distinction is load-bearing: it permits the pattern to evolve independently of substrate changes, and substrate to evolve independently of pattern changes. Surfaced and ratified by Director 2026-05-23 (see [memos/2026-05-23-1100--thingalog-strategist--orgdef-strategist--handoff-addendum-data-vs-pattern.body.md](../memos/2026-05-23-1100--thingalog-strategist--orgdef-strategist--handoff-addendum-data-vs-pattern.body.md))."
+    }
+  ],
+
+  "red_lines": [
+    {
+      "rule": "No NULL-context canonical OAGP artifacts accepted by the spec, the validator, or the canonical adoption-cycle skills.",
+      "rationale": "Technical, not aesthetic — null context causes hallucination in the primary (machine) reader. The MUST-have-substantive-content rule is a hallucination-prevention rule applied at the OAGP-pattern layer, mirroring the equivalent rule in each data-format spec."
+    },
+    {
+      "rule": "No content policing of OAGP-shaped consumer organizations.",
+      "rationale": "What organizations choose to build using the OAGP pattern is their business, not OAGP's. The pattern governs structural integrity (bounded authority, ratification cycles, audit trails) and offers conventions (adoption skills, canonical patterns) — it does NOT police the morality of orgs that adopt it. Curation happens at the canonical-references-library level (which adopter orgs OAGP highlights as reference implementations), not at the pattern level."
+    },
+    {
+      "rule": "No substrate capture. OAGP MUST remain implementable on substrates other than the catdef family.",
+      "rationale": "Recommending catdef as the canonical substrate is a SHOULD, not a MUST. Canonical pattern documentation MUST express OAGP semantics in substrate-neutral terms; reference implementations in catdef-family substrate are exemplars, not the pattern itself. Substrate capture would re-conflate the data-vs-pattern distinction the value above defends."
+    },
+    {
+      "rule": "No vendor capture. Cross-vendor neutrality MUST be preserved structurally in all packaging, hosting, and distribution decisions.",
+      "rationale": "Anthropic-ecosystem deliveries (Claude Code plugin, claude.ai project) are acceptable transports for adoption convenience, but MUST be framed as transports of an open cross-vendor pattern — not as the canonical pattern itself. README / manifest / docs that imply OAGP is Anthropic-aligned are red-line violations. The canonical pattern lives at oagp.org and is reachable via every viable runtime including non-Anthropic ones."
+    }
+  ],
+
+  "recommended_patterns": {
+    "general": [
+      "[PATTERN-SHAPE DECISIONS DEFERRED TO oagp-strategist WHEN STAFFED] — For v0.1 first-cut, the recommended_patterns canonically inherited from the orgdef-family canonical-template v2.0.0 (oagp-family-open-standard) apply as the v0 baseline. oagp-strategist will curate, extend, and promote additional patterns as canonical (candidates already surfaced: org-state-fork-for-time-travel; async-organization positioning; bootstrap-helper transcript-tagging convention; data-vs-pattern layer distinction; canonical-by-reference holding-venue framing). See [memos/2026-05-23-0900--thingalog-strategist--orgdef-strategist--oagp-canonical-work-handoff.body.md](../memos/2026-05-23-0900--thingalog-strategist--orgdef-strategist--oagp-canonical-work-handoff.body.md) for the surfaced-pattern inventory pending pattern_promotion calls."
+    ],
+    "recommended_roles": [
+      { "role": "human-director", "priority": "MUST", "why": "Bounded-authority discipline requires a human ratifier." },
+      { "role": "oagp-strategist", "priority": "MUST", "why": "OAGP pattern-promotion calls, MUST/SHOULD curation, canonical-skill content authority, cross-runtime delivery prioritization." },
+      { "role": "oagp-maintainer", "priority": "MUST", "why": "Drafts pattern documentation, walks pattern validations, files decision artifacts." },
+      { "role": "oagp-implementer", "priority": "SHOULD", "why": "Agent-sdk bindings, plugin packaging, web/docs publishing, runtime delivery packages." },
+      { "role": "oagp-security-tester", "priority": "SHOULD", "why": "Plugin distribution and runtime bindings have meaningful attack surface; security testing is canonical-implementation discipline." }
+    ]
+  },
+
+  "v1_success_criterion": "oagp-org ships v1 when: (a) this orgdef exists as a valid self-describing orgdef:Organization opencatalog artifact in oagp-org/org/ (recursive self-description — the pattern can describe itself using itself); (b) canonical OAGP pattern documentation is published at oagp.org (substrate-neutral pattern semantics, plus catdef-family reference implementations); (c) the `/oagp-bootstrap` + `/oagp-onboard` adoption-cycle pair is OAGP-canonically designated and operational; (d) at least one non-spec real-org adopter exists in the wild (Thingalog is the empirical reference; DangerStorm-test is the bootstrap validation instance; Caliper is the second empirical reference). Items (a) is satisfied by this artifact's existence; (b)–(d) are forward work.",
+
+  "relationships": [
+    { "type": "reports_to", "from": "strategist", "to": "director", "description": "Strategist holds delegated authority for OAGP-pattern-shape decisions; Director ratifies decisions, merges, version bumps, governance changes." },
+    { "type": "directs", "from": "strategist", "to": "maintainer", "description": "Strategist makes calls; maintainer drafts pattern documentation and decision artifacts in support of those calls." },
+    { "type": "directs", "from": "strategist", "to": "implementer", "description": "Strategist sets direction for agent-sdk / plugin / web priorities; implementer produces and tests reference implementations." },
+    { "type": "directs", "from": "strategist", "to": "security-tester", "description": "Strategist directs security-testing priorities (especially around plugin distribution and runtime bindings); security-tester reports findings and recommends remediation." },
+    { "type": "coordinates_with", "from": "strategist", "to": "external:catdef-strategist", "description": "Cross-spec coordination on catdef substrate concerns. OAGP recommends catdef as canonical substrate; coordination governs the recommendation's evolution." },
+    { "type": "coordinates_with", "from": "strategist", "to": "external:roledef-strategist", "description": "Cross-spec coordination on roledef format concerns. OAGP positions reference roledefs; coordination governs the reference shape." },
+    { "type": "coordinates_with", "from": "strategist", "to": "external:orgdef-strategist", "description": "Cross-spec coordination on orgdef format concerns. OAGP-shaped orgs are encoded as orgdef artifacts; coordination governs format evolution affecting pattern expressiveness." },
+    { "type": "coordinates_with", "from": "strategist", "to": "external:memodef-strategist", "description": "Cross-spec coordination on memodef format concerns. Inter-position memos in OAGP-shaped orgs use memodef artifacts; coordination governs format evolution affecting OAGP communication conventions." },
+    { "type": "coordinates_with", "from": "strategist", "to": "external:transcriptdef-strategist", "description": "Cross-spec coordination on transcriptdef format concerns. Per-seat reasoning records in OAGP-shaped orgs use transcriptdef artifacts; coordination governs format evolution. Note: transcriptdef-spec governance venue may not yet exist at oagp-org's founding; coordination forward-flagged." }
+  ],
+
+  "items": [
+    {
+      "type": "orgdef:Position",
+      "id": "director",
+      "name": "Director",
+      "status": "staffed",
+      "incumbent": { "kind": "human", "identifier": "Scott <scott@confusedgorilla.com>" },
+      "description": "Human Director with final tiebreaker authority over OAGP pattern decisions, canonical-promotion ratifications, governance changes, and version bumps. No role_definition (humans are not derived from roledefs)."
+    },
+    {
+      "type": "orgdef:Position",
+      "id": "strategist",
+      "name": "OAGP Strategist",
+      "status": "vacant",
+      "description": "Holds delegated authority for OAGP-pattern-shape design decisions: pattern-promotion calls (e.g., adoption-cycle pair canonical designation; org-state-fork-for-time-travel property; async-organization positioning), MUST/SHOULD curation, canonical-skill content authority, cross-runtime delivery prioritization, adoption-cycle architecture. Inbox at founding includes the inherited work re-routed from orgdef-strategist per [memos/2026-05-23-1100--thingalog-strategist--orgdef-strategist--handoff-addendum-data-vs-pattern.body.md](../memos/2026-05-23-1100--thingalog-strategist--orgdef-strategist--handoff-addendum-data-vs-pattern.body.md). Job specialization deferred — when this seat staffs, the incumbent (with Director ratification) authors the embedded roledef:Job item carrying charter / identity / voice / output_contract / guardrails. Derivation reference: senior-open-standards-strategist (https://roledef.org/roledefs/senior-open-standards-strategist.openthing). Interim: oagp-director (Scott) holds the strategist's work as oagp-director."
+    },
+    {
+      "type": "orgdef:Position",
+      "id": "maintainer",
+      "name": "OAGP Maintainer",
+      "status": "vacant",
+      "description": "Drafts pattern documentation, walks pattern validations, files decision artifacts in `decisions/`. Job specialization deferred — embedded roledef:Job item authored when seat staffs or strategist directs."
+    },
+    {
+      "type": "orgdef:Position",
+      "id": "implementer",
+      "name": "OAGP Implementer",
+      "status": "vacant",
+      "description": "Develops and maintains agent-sdk library (mapping roledefs to vendor AgentDefinitions across runtimes), plugin packaging (Claude Code plugin source; future cross-runtime packages), web/docs publishing (oagp.org canonical hosting), runtime delivery package authoring (claude.ai project template, ChatGPT custom GPT, Gemini Gem, first-message primer text). Job specialization deferred."
+    },
+    {
+      "type": "orgdef:Position",
+      "id": "security-tester",
+      "name": "OAGP Security Tester",
+      "status": "vacant",
+      "description": "Red-team work, threat modeling, attack-surface review — with particular emphasis on plugin distribution (potential supply-chain surface), runtime bindings (potential prompt-injection or capability-leak surface), and adoption-cycle skill content (the skills carry instructions that fresh AI peers execute). Job specialization deferred."
+    },
+    {
+      "type": "orgdef:Position",
+      "id": "canonical-implementor",
+      "name": "Canonical Implementor",
+      "status": "vacant",
+      "description": "Reference implementations of OAGP patterns: reference adoption-cycle skill content, reference agent-sdk binding examples, reference plugin manifest, reference web site content, reference validator behavior. Distinct from implementer (who builds production deliverables) in that canonical-implementor produces minimal exemplars that other implementers (including external ones) can derive from. Job specialization deferred."
+    }
+  ],
+
+  "metadata": {
+    "kind": "operational",
+    "authors": [
+      "Scott <scott@confusedgorilla.com> (Director)",
+      "orgdef-strategist <orgdef-strategist@orgdef.org> (drafted under Director direction 2026-05-23; format-shape authoring on behalf of vacant oagp-strategist seat — pattern-shape decisions flagged for ratification)"
+    ],
+    "license": "MIT",
+    "created": "2026-05-23",
+    "extracted_from": "Bootstrap via PO direction 2026-05-23 in orgdef-strategist session, post data-vs-pattern sharpening. Inputs: thingalog-strategist hand-off memos at orgdef-spec/memos/ (2026-05-22-1430 pattern_promotion; 2026-05-22-1530 validation closeout; 2026-05-23-0900 hand-off; 2026-05-23-1100 addendum with data-vs-pattern sharpening). Reference shape: github.com/orgdef-spec/orgdef/orgdef-spec-organization.opencatalog (v2.0.0; sibling -def-spec org). Canonical template: github.com/orgdef-spec/orgdef/proposed-orgs/oagp-family-open-standard.opencatalog v2.0.0. Authoring discipline: orgdef-strategist authored the format-shape (artifact validity, structural placement, position roster shape); pattern-shape content (mission/values/red-lines/v1_criterion) sourced from the data-vs-pattern sharpening memo + canonical template inheritance, flagged for Director ratification.",
+    "homepage": "https://oagp.org (forthcoming)",
+    "repository": "https://github.com/scottconfusedgorilla/oagp-org/blob/main/org/oagp-organization.opencatalog",
+    "derived_from": {
+      "id": "oagp-family-open-standard",
+      "version": "2.0.0",
+      "url": "https://github.com/orgdef-spec/orgdef/blob/main/proposed-orgs/oagp-family-open-standard.opencatalog"
+    },
+    "history": [
+      { "version": "0.1.0", "date": "2026-05-23", "change": "Initial scaffolding via orgdef-strategist on PO direction post data-vs-pattern sharpening. v0.1.0 (not v1.0.0) because: (a) oagp-strategist seat is vacant — pattern-shape content awaits ratification by the staffed strategist seat; (b) embedded roledef:Job items deferred until seats staff; (c) recommended_patterns.general placeholder pending oagp-strategist pattern-promotion calls; (d) canonical pattern documentation at oagp.org does not yet exist. Promotion to v1.0.0 expected when v1_success_criterion items (b)–(d) are satisfied." }
+    ]
+  }
+}
