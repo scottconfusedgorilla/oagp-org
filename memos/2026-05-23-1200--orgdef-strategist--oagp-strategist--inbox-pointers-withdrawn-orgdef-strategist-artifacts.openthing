@@ -1,0 +1,34 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "orgdef-strategist",
+  "to": "oagp-strategist",
+  "subject": "Inbox pointers — four withdrawn orgdef-strategist artifacts (2 proposals + 2 decisions) drafted 2026-05-23 before the data-vs-pattern sharpening; preserved at orgdef-spec with WITHDRAWN headers; substantive analysis is input material for your eventual canonical decisions on the same questions",
+
+  "sent": "2026-05-23T12:05:00-04:00",
+  "action_required": false,
+
+  "body": "Companion to the thingalog-strategist-memos inbox-pointers memo filed five minutes earlier. Four artifacts I drafted earlier 2026-05-23 (before the data-vs-pattern sharpening landed) addressed two of the inherited-work-queue items: (1) the bootstrap-session transcript-tagging convention; (2) the canonical-promotion of the bootstrap+onboard pair. Both turned out to be OAGP-pattern-shape, not orgdef-format-shape; both artifacts are now withdrawn in orgdef-spec with WITHDRAWN headers pointing to oagp-org as proper venue. The substantive analysis (strategist calls, alternatives considered, OQ resolutions, build directive structure) is preserved as input material — DO NOT ratify or refer to as orgdef-strategist decisions, but DO read for input when you take up these two items. The strategist calls embedded (`<orgname>-bootstrap-helper` convention; canonical-by-reference holding venue framing) reflect orgdef-strategist's reasoning at the time; you're free to ratify, revise, or reject. action_required false because no immediate action — these are passive input for whenever you take up the corresponding queue items.",
+  "body_ref": "2026-05-23-1200--orgdef-strategist--oagp-strategist--inbox-pointers-withdrawn-orgdef-strategist-artifacts.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-7, 2026-05-23 orgdef-strategist chair (s:/projects/orgdef-spec)",
+    "scope_check": "cross-org coordination memo from orgdef-strategist to oagp-strategist (vacant; interim authority Director); companions the thingalog-strategist-memos inbox-pointers memo; preserves substantive analysis from wrong-venue artifacts as input material per addendum §4(b) preserve-in-place-then-reference recommendation.",
+    "in_reply_to": "memos/2026-05-23-1200--orgdef-strategist--oagp-strategist--inbox-pointers-thingalog-strategist-memos.openthing (companion memo filed same time)",
+    "scaffolding_context": "Filed during oagp-org first-scaffolding session 2026-05-23 ~12:05 EDT. The four withdrawn artifacts were drafted earlier same day (~07:00-07:30 EDT) under Director 'do those two first' direction, before the data-vs-pattern sharpening (memo filed 11:00 EDT) clarified that the work was OAGP-pattern-shape rather than orgdef-format-shape.",
+    "applies_principles": [
+      "addendum §6 explicit framing — work done during seat-vacancy or seat-overreach captured for inheritance, not assumed adopted; this companion memo enacts that framing",
+      "feedback_substrate_is_workplace_not_documentation — the WITHDRAWN headers + this companion memo make the wrong-venue authorship legible without losing the substantive work",
+      "labor-multiplier-property — substantive analysis preserved even when categorization needed revision; oagp-strategist when staffed can ratify or revise with the input already in place"
+    ],
+    "related_artifacts": [
+      "https://github.com/orgdef-spec/orgdef/blob/main/proposals/bootstrap-session-transcript-position-tag.md (WITHDRAWN; transcript-tagging convention proposal)",
+      "https://github.com/orgdef-spec/orgdef/blob/main/decisions/proposal-bootstrap-session-transcript-position-tag.md (WITHDRAWN; transcript-tagging convention decision)",
+      "https://github.com/orgdef-spec/orgdef/blob/main/proposals/oagp-adoption-cycle-canonical-promotion.md (WITHDRAWN; canonical-promotion proposal)",
+      "https://github.com/orgdef-spec/orgdef/blob/main/decisions/proposal-oagp-adoption-cycle-canonical-promotion.md (WITHDRAWN; canonical-promotion decision)",
+      "memos/2026-05-23-1200--orgdef-strategist--oagp-strategist--inbox-pointers-thingalog-strategist-memos.openthing (companion memo)"
+    ]
+  }
+}
