@@ -2,7 +2,7 @@
 
 This document is read by any Claude session entering oagp-org. It establishes the discipline that all seats in this org operate under.
 
-**Status:** Provisional pending oagp-strategist seat staffing. Format-shape (structure, role boundaries, bounded-authority discipline) drafted by orgdef-strategist 2026-05-23 per Director direction. Pattern-shape content (OAGP-specific operating commitments, seat-specific behaviors) awaits oagp-strategist ratification.
+**Status:** v0.1.1 — oagp-strategist seat staffed 2026-05-23 under Director direction. Format-shape (structure, role boundaries, bounded-authority discipline) drafted by orgdef-strategist 2026-05-23. Pattern-shape content carried forward from the v0.1.0 draft and accepted-by-staffing as the seat's operating frame; eight-item inherited work queue under active strategist authorship, with specific decisions Director-merge-ratified per item.
 
 ## Quick reference
 
@@ -26,7 +26,7 @@ This distinction governs operating discipline in oagp-org: when authoring artifa
 | Position | Status | Scope |
 |---|---|---|
 | Director (Scott) | Staffed | Final tiebreaker authority; ratifies pattern decisions, merges, version bumps, governance changes |
-| oagp-strategist | **Vacant** | OAGP pattern-shape design decisions; pattern-promotion calls; canonical-skill content authority; cross-runtime delivery prioritization |
+| oagp-strategist | Staffed 2026-05-23 | OAGP pattern-shape design decisions; pattern-promotion calls; canonical-skill content authority; cross-runtime delivery prioritization |
 | oagp-maintainer | Vacant | Pattern documentation drafting; pattern validations; decision artifact filing |
 | oagp-implementer | Vacant | agent-sdk bindings; plugin packaging; web/docs publishing; runtime delivery packages |
 | oagp-security-tester | Vacant | Red-team work on plugin distribution, runtime bindings, adoption-cycle skill content |
@@ -55,7 +55,7 @@ This boundedness is a feature, not a limitation. A seat with merge rights would 
 ## What every oagp-org seat does NOT do
 
 1. **Does not merge.** The Director merges.
-2. **Does not decide pattern governance.** Library-curation calls, scope-narrowing decisions, pattern-promotion calls are oagp-strategist scope (vacant); when oagp-strategist is unstaffed, those calls default to the Director.
+2. **Does not decide pattern governance.** Library-curation calls, scope-narrowing decisions, pattern-promotion calls are oagp-strategist scope; the strategist drafts and the Director ratifies-by-merge.
 3. **Does not act as a runtime-vendor advocate.** All AI runtimes are equal citizens. No seat lobbies for any one vendor.
 4. **Does not act as a substrate advocate beyond the recommended-canonical SHOULD.** catdef family is the recommended substrate; other substrates are permitted. No seat may promote substrate exclusivity.
 5. **Does not claim continuity it doesn't have.** Each AI session is a session. Institutional memory lives in the repo (commits, memos, decisions, proposals, transcripts) — not in any session's working memory.
@@ -88,15 +88,19 @@ Cross-spec coordination is via memos to the relevant -def-spec strategist. When 
 
 ## Known work items (inherited from orgdef-spec hand-off)
 
-Per the data-vs-pattern sharpening of 2026-05-23 ([orgdef-spec memos/2026-05-23-1100--thingalog-strategist--orgdef-strategist--handoff-addendum-data-vs-pattern.body.md](https://github.com/orgdef-spec/orgdef/blob/main/memos/2026-05-23-1100--thingalog-strategist--orgdef-strategist--handoff-addendum-data-vs-pattern.body.md)), the following items belong to oagp-strategist (currently held by Director as interim):
+Per the data-vs-pattern sharpening of 2026-05-23 ([orgdef-spec memos/2026-05-23-1100--thingalog-strategist--orgdef-strategist--handoff-addendum-data-vs-pattern.body.md](https://github.com/orgdef-spec/orgdef/blob/main/memos/2026-05-23-1100--thingalog-strategist--orgdef-strategist--handoff-addendum-data-vs-pattern.body.md)), the following items belong to oagp-strategist (seat staffed 2026-05-23):
 
-- **Canonical promotion of `/oagp-bootstrap` + `/oagp-onboard` pair** — gate-condition closed; awaiting oagp-strategist call on hosting + canonical-formatting
-- **Bootstrap-session transcript-position-tagging convention** — `<orgname>-bootstrap-helper` recommended; awaiting oagp-strategist ratification
-- **Org-state-fork-for-time-travel property** — pattern-promotion candidate; substrate-agnostic property
+- **Canonical promotion of `/oagp-bootstrap` + `/oagp-onboard` pair** — drafted 2026-05-23 ([proposals/oagp-adoption-cycle-canonical-promotion.md](proposals/oagp-adoption-cycle-canonical-promotion.md) + [decisions/proposal-oagp-adoption-cycle-canonical-promotion.md](decisions/proposal-oagp-adoption-cycle-canonical-promotion.md)); awaiting Director ratification via merge
+- **Canonical adoption-cycle skill distribution v0.1** — drafted 2026-05-24 ([proposals/canonical-adoption-cycle-skill-distribution-v0.1.md](proposals/canonical-adoption-cycle-skill-distribution-v0.1.md) + [decisions/proposal-canonical-adoption-cycle-skill-distribution-v0.1.md](decisions/proposal-canonical-adoption-cycle-skill-distribution-v0.1.md)); migrates skill residence to oagp-org/skills/ + adds Claude Code install scripts; scope amended 2026-05-24 to include `/oagp-closeout`; awaiting Director ratification
+- **Canonical promotion of `/oagp-closeout`** — drafted 2026-05-24 ([proposals/oagp-closeout-canonical-promotion.md](proposals/oagp-closeout-canonical-promotion.md) + [decisions/proposal-oagp-closeout-canonical-promotion.md](decisions/proposal-oagp-closeout-canonical-promotion.md)); session-cycle closing skill companion to `/oagp-onboard`; awaiting Director ratification
+- **Bootstrap-session transcript-position-tagging convention** — resolved 2026-05-24 by the closeout canonicalization decision for the canonical case; convention canonically encoded in [skills/oagp-closeout/SKILL.md](skills/oagp-closeout/SKILL.md) Phase 2 table (staffed-seat → seat id; bootstrap → `<orgname>-bootstrap-helper`; unattached → `unattached-ai`); edge cases (multi-org, mid-session role transitions, multi-AI sessions) flagged for future convention decisions if they surface
+- **Org-state-fork-for-time-travel property** — pattern-promotion candidate; substrate-agnostic property; empirically validated 2026-05-23 by bind() + agent-view demo
 - **Async-organization positioning** — pattern + agent-runtime integration; architectural commitment candidate
 - **Caliper local-conventions canonical work** — three sub-questions (position-naming style; memos/inbox+read routing; proposals/ vs decisions/ separation)
-- **OAGP plugin packaging strategic call** — cross-vendor positioning implications
-- **Cross-runtime delivery package coordination** — Claude Code, C4C, claude.ai, ChatGPT, Gemini, Perplexity, first-message primer
+- **OAGP plugin packaging strategic call** — cross-vendor positioning implications; v0.1 distribution decision (2026-05-24) explicitly scheduled this as v0.3 (after substrate-neutral primer v0.2)
+- **Cross-runtime delivery package coordination** — Claude Code, C4C, claude.ai, ChatGPT, Gemini, Perplexity, first-message primer; partially addressed by v0.1 distribution decision (Claude Code path); v0.2 (substrate-neutral primer URL) is the next scheduled increment
 - **oagp.org canonical hosting** — venue setup + canonical content migration
+- **Canonical-orgs library residence** — coordination request from orgdef-strategist (memos/2026-05-24-0900); reply memo forthcoming; structurally parallel to the skill-residence call resolved by the v0.1 distribution decision
+- **bind() + agent-sdk graduation** — recommendation memo 2026-05-23-1600 from thingalog-strategist; reading + API ratification pending
 
 Full inventory + analysis input in [memos/](memos/) inbox (pointer memos referencing originating orgdef-spec memos + withdrawn orgdef-strategist artifacts).

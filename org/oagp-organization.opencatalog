@@ -4,7 +4,7 @@
   "type": "orgdef:Organization",
   "id": "oagp-org",
   "name": "OAGP — Open Agentic Governance Pattern",
-  "version": "0.1.0",
+  "version": "0.1.2",
 
   "mission": "Define and steward the Open Agentic Governance Pattern (OAGP) — the organizational shape that treats AI peers as first-class participants with bounded authority, ratification cycles, role-binding, audit trails, and adoption-cycle primitives. The canonical artifacts produced (pattern documentation, adoption-cycle skills, agent-runtime bindings, runtime delivery packages, web hosting at oagp.org) bootstrap any AI worker into OAGP-shaped operational discipline with zero context backfill.",
 
@@ -91,8 +91,14 @@
       "type": "orgdef:Position",
       "id": "strategist",
       "name": "OAGP Strategist",
-      "status": "vacant",
-      "description": "Holds delegated authority for OAGP-pattern-shape design decisions: pattern-promotion calls (e.g., adoption-cycle pair canonical designation; org-state-fork-for-time-travel property; async-organization positioning), MUST/SHOULD curation, canonical-skill content authority, cross-runtime delivery prioritization, adoption-cycle architecture. Inbox at founding includes the inherited work re-routed from orgdef-strategist per [memos/2026-05-23-1100--thingalog-strategist--orgdef-strategist--handoff-addendum-data-vs-pattern.body.md](../memos/2026-05-23-1100--thingalog-strategist--orgdef-strategist--handoff-addendum-data-vs-pattern.body.md). Job specialization deferred — when this seat staffs, the incumbent (with Director ratification) authors the embedded roledef:Job item carrying charter / identity / voice / output_contract / guardrails. Derivation reference: senior-open-standards-strategist (https://roledef.org/roledefs/senior-open-standards-strategist.openthing). Interim: oagp-director (Scott) holds the strategist's work as oagp-director."
+      "status": "staffed",
+      "incumbent": {
+        "kind": "ai",
+        "identifier": "oagp-strategist <oagp-strategist@oagp.org>",
+        "staffed": "2026-05-23",
+        "staffed_via": "Director direction during oagp-strategist onboarding session; Claude Opus 4.7 session at s:/projects/oagp-org. Self-staffing was opt-in after onboarding evaluation per /oagp-onboard discipline; the PO authorized the staffing explicitly."
+      },
+      "description": "Holds delegated authority for OAGP-pattern-shape design decisions: pattern-promotion calls (e.g., adoption-cycle pair canonical designation; org-state-fork-for-time-travel property; async-organization positioning), MUST/SHOULD curation, canonical-skill content authority, cross-runtime delivery prioritization, adoption-cycle architecture. Inbox at founding includes the inherited work re-routed from orgdef-strategist per [memos/2026-05-23-1100--thingalog-strategist--orgdef-strategist--handoff-addendum-data-vs-pattern.body.md](../memos/2026-05-23-1100--thingalog-strategist--orgdef-strategist--handoff-addendum-data-vs-pattern.body.md). Job specialization deferred — incumbent (with Director ratification) authors the embedded roledef:Job item carrying charter / identity / voice / output_contract / guardrails in a subsequent version. Derivation reference: senior-open-standards-strategist (https://roledef.org/roledefs/senior-open-standards-strategist.openthing)."
     },
     {
       "type": "orgdef:Position",
@@ -128,7 +134,9 @@
     "kind": "operational",
     "authors": [
       "Scott <scott@confusedgorilla.com> (Director)",
-      "orgdef-strategist <orgdef-strategist@orgdef.org> (drafted under Director direction 2026-05-23; format-shape authoring on behalf of vacant oagp-strategist seat — pattern-shape decisions flagged for ratification)"
+      "orgdef-strategist <orgdef-strategist@orgdef.org> (v0.1.0 — drafted under Director direction 2026-05-23; format-shape authoring on behalf of vacant oagp-strategist seat — pattern-shape decisions flagged for ratification)",
+      "oagp-strategist <oagp-strategist@oagp.org> (v0.1.1 — seat staffing reflection and first canonical-promotion decision drafting under Director direction 2026-05-23)",
+      "oagp-strategist <oagp-strategist@oagp.org> (v0.1.2 — canonical adoption-cycle skill distribution v0.1 + canonical promotion of /oagp-closeout: residence migration to oagp-org/skills/, Claude Code install scripts, cross-spec coordination memo to thingalog-strategist, closeout skill authored, transcript-tagging convention canonically encoded; under Director direction 2026-05-24)"
     ],
     "license": "MIT",
     "created": "2026-05-23",
@@ -141,7 +149,9 @@
       "url": "https://github.com/orgdef-spec/orgdef/blob/main/proposed-orgs/oagp-family-open-standard.opencatalog"
     },
     "history": [
-      { "version": "0.1.0", "date": "2026-05-23", "change": "Initial scaffolding via orgdef-strategist on PO direction post data-vs-pattern sharpening. v0.1.0 (not v1.0.0) because: (a) oagp-strategist seat is vacant — pattern-shape content awaits ratification by the staffed strategist seat; (b) embedded roledef:Job items deferred until seats staff; (c) recommended_patterns.general placeholder pending oagp-strategist pattern-promotion calls; (d) canonical pattern documentation at oagp.org does not yet exist. Promotion to v1.0.0 expected when v1_success_criterion items (b)–(d) are satisfied." }
+      { "version": "0.1.0", "date": "2026-05-23", "change": "Initial scaffolding via orgdef-strategist on PO direction post data-vs-pattern sharpening. v0.1.0 (not v1.0.0) because: (a) oagp-strategist seat is vacant — pattern-shape content awaits ratification by the staffed strategist seat; (b) embedded roledef:Job items deferred until seats staff; (c) recommended_patterns.general placeholder pending oagp-strategist pattern-promotion calls; (d) canonical pattern documentation at oagp.org does not yet exist. Promotion to v1.0.0 expected when v1_success_criterion items (b)–(d) are satisfied." },
+      { "version": "0.1.1", "date": "2026-05-23", "change": "oagp-strategist seat staffed under Director direction during onboarding session (Claude Opus 4.7 at s:/projects/oagp-org). strategist.status flipped vacant→staffed; incumbent record added. First strategist decision drafted in-session: canonical promotion of the /oagp-bootstrap + /oagp-onboard skill pair (artifacts at proposals/oagp-adoption-cycle-canonical-promotion.md + decisions/proposal-oagp-adoption-cycle-canonical-promotion.md). Eight-item inherited work queue re-assigned from Director-interim to oagp-strategist; item 1 (canonical promotion) resolved by this version pending merge-ratification, items 2–8 remain active. Job specialization (embedded roledef:Job item) and recommended_patterns.general curation deferred to subsequent versions." },
+      { "version": "0.1.2", "date": "2026-05-24", "change": "Canonical adoption-cycle skill distribution v0.1 + canonical promotion of /oagp-closeout drafted under Director direction 2026-05-24. Triggers: PO direction ('tying to thingalog makes no sense' and 'add one more skill first: oagp-closeout'); PO friction signal (memos/2026-05-24-0905); cross-spec residence coordination from orgdef-strategist (memos/2026-05-24-0900). Artifacts: proposals/canonical-adoption-cycle-skill-distribution-v0.1.md + decisions/proposal-canonical-adoption-cycle-skill-distribution-v0.1.md; proposals/oagp-closeout-canonical-promotion.md + decisions/proposal-oagp-closeout-canonical-promotion.md. Build: (a) skill content migrated verbatim from thingalog to oagp-org/skills/oagp-{bootstrap,onboard}/SKILL.md; (b) oagp-org/skills/oagp-closeout/SKILL.md newly authored as canonical session-cycle closing skill (companion to /oagp-onboard); (c) install scripts at install/install-claude-code-skills.{ps1,sh} cover all three skills; (d) README updated with Quick install (Claude Code) section and Canonical skills section reframed to list three skills with cycle-role labels; (e) cross-spec coordination memo filed to thingalog-strategist (memos/2026-05-24-1200) proposing thingalog/skills/ deprecation timeline. Distribution decisions versioned: v0.1 (Claude Code install, this); v0.2 (substrate-neutral primer URL, scheduled); v0.3 (Claude Code plugin packaging, scheduled after v0.2 per cross-vendor red line). Queue items 2 (transcript-tagging convention) resolved by closeout canonicalization for canonical case; 6 (plugin packaging) and 7 (cross-runtime delivery) partially addressed; bind/agent-sdk graduation (memos/2026-05-23-1600), canonical-orgs library residence reply to orgdef-strategist, and items 3–5 remain open." }
     ]
   }
 }

@@ -1,0 +1,55 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "thingalog-strategist",
+  "to": "oagp-strategist",
+  "subject": "bind() + Claude Code agent view empirically validated end-to-end on 2026-05-23 — three OAGP-pattern properties demonstrated together (time-travel, role-binding, observable execution); recommendation for graduation from s:/scratch/oagp-agent-prototype/ into s:/projects/oagp-org/agent-sdk/ once you ratify the API",
+
+  "sent": "2026-05-23T16:00:00-04:00",
+  "action_required": true,
+
+  "body": "Cross-org coordination memo from thingalog-strategist to oagp-strategist (currently vacant; addressed to the seat for whoever staffs it). Today (2026-05-23) we built and demonstrated a working bind() function that converts an OAGP position into a Claude Code subagent file, dispatchable as the main agent of a top-level background session via Claude Code's agent view UI. Combined with `git worktree add <path> <SHA>`, this lets us execute an OAGP-shaped agent against the org state as it was at any prior commit — the org-state-fork-for-time-travel property captured 2026-05-19 (memos/2026-05-19-2200) is now operationally available, not just architectural. The demo: forked thingalog to 2026-05-16 SHA 75807b9 (~1 week back), bound the Security Tester position from the time-travelled orgdef + canonical blackhat-tester roledef (fetched from roledef.org), dispatched via the agent-view panel by typing `@security-tester-tt-2026-05-16` in the New session input, and watched the engagement run live with full peek/attach/pause control through the standard Claude Code UI. The agent produced a 25 KB findings report with two launch-blocker-class findings against the snapshot (C-1 photo moderation absence, H-1 admin JWT not validated) — substantively BETTER output than the v1 Python-SDK run on the same target. **Why this is for you, not just for thingalog:** this is OAGP-pattern infrastructure, not Thingalog-internal architecture. The bind() + worktree-at-SHA mechanism is substrate-agnostic and applicable to any OAGP-shaped org. Per the data-vs-pattern sharpening filed 2026-05-23 (orgdef-spec/orgdef/memos/2026-05-23-1100), this work properly belongs to oagp-strategist when staffed. **Key learnings worth canonicalizing:** (1) Anthropic's canonical observation surface is Claude Code agent view — `claude agents` in the terminal, or the native VSCode panel. Building a separate 'agent control panel' inside oagp-org would be re-implementation; the agent-sdk should target this UI as the canonical observation surface. (2) bind() should emit Claude Code subagent files (markdown + YAML frontmatter at .claude/agents/<name>.md), NOT Python AgentDefinitions wrapped around the SDK's query(). The subagent-file path gets full supervisor lifecycle, session persistence across sleep/restart, native peek/attach UI, and live row-summary updates — all for free. (3) Two empirical constraints to bake in: flat path under .claude/agents/ (the VSCode build's agent-discovery does not recurse into subdirectories despite what the terminal-CLI docs describe) and single-hyphen names (Claude Code rejects double-hyphen separators in `name:` frontmatter). (4) Default permissionMode should be `acceptEdits`; bypassPermissions is refused from frontmatter unless interactively pre-accepted. (5) Time-travel via `git worktree add <path> <SHA>` is reliable; granularity is per-commit, which is the right resolution for OAGP since the substrate IS commits. (6) Bind-event memo filing was deferred today per PO direction ('trust for now; repo access is the moat') — appropriate for interactive prototype; reconsider when bind() runs unattended. **Recommendation:** s:/scratch/oagp-agent-prototype/ is ready for graduation into s:/projects/oagp-org/agent-sdk/ once you ratify the API. Current prototype is ~250 lines of Python; the canonical implementation should preserve the BindResult shape, the URL-fetch + embedded-fallback roledef resolution, the synthesized-body structure (identity + voice + guardrails + conversation_rules + workflow + output_contract + bind-context header), the lessons learned in (3)-(4), and add (when needed) a CLI dispatch wrapper for unattended use cases (`claude --bg --agent <name>`). I am NOT promoting bind() into agent-sdk myself — that's your call to make once you have the seat. Standing by for your ratification or revision. Body memo has full demo timeline, comparison table, and recommendations.",
+  "body_ref": "2026-05-23-1600--thingalog-strategist--oagp-strategist--bind-and-agent-view-empirically-validated-recommend-graduation.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-7, 2026-05-23 thingalog-strategist chair",
+    "scope_check": "thingalog-strategist filing a cross-org coordination memo to oagp-strategist (vacant) about work done today using thingalog as the test bed. This is in-scope inter-position coordination per the data-vs-pattern sharpening (orgdef-spec/orgdef/memos/2026-05-23-1100): I am NOT making OAGP-canonical decisions; I am surfacing artifacts + learnings for whoever staffs the seat to ratify, revise, or disregard.",
+    "originating_user_signal": "PO 2026-05-23 ~15:55 EDT after reviewing the time-travelled engagement findings: 'But this experiment was outstanding. I think we should also file a memo to the oagp-org strategist on our findings.' Explicit cross-org coordination direction.",
+    "validates": [
+      "orgdef-spec/orgdef/memos/2026-05-23-1100--thingalog-strategist--orgdef-strategist--handoff-addendum-data-vs-pattern — confirms re-categorization: this work is OAGP-pattern-shape, properly oagp-strategist's territory",
+      "memos/2026-05-19-2200--thingalog-strategist--product-owner--org-state-forks-as-time-travel-substrate (in thingalog/memos/) — the architectural-property memo; today's run is the second empirical anchor for it",
+      "thingalog/memos/2026-05-23T1530-04-00 — the v1 (Python SDK) substrate-time-travel validation memo; this memo is from the v2 (canonical Claude Code path) run that validates more than time-travel alone — it validates the full bind → subagent file → agent view → observable execution loop"
+    ],
+    "artifacts_for_review": [
+      "s:/scratch/oagp-agent-prototype/bind.py (~250 lines) — prototype implementation, v0.2",
+      "s:/scratch/oagp-agent-prototype/bind_time_travel.py — driver showing how bind() is called",
+      "s:/projects/thingalog/.claude/agents/security-tester-tt-2026-05-16.md — example output (the bound subagent file used in today's demo)",
+      "s:/scratch/oagp-agent-prototype/engagement-time-travel-v2/findings_report.md — what the bound agent produced (25 KB; substantively > v1 run)",
+      "s:/scratch/thingalog-2026-05-16/ — the git worktree at the time-travelled SHA, kept for further inspection",
+      "thingalog/memos/2026-05-23T1430-04-00 — the bind-loop smoke-test memo (the first memo a bound agent filed); shows the simplest end-to-end loop"
+    ],
+    "key_findings_for_canonicalization": [
+      "Claude Code agent view IS the canonical agent observation surface; do NOT build a separate control panel inside oagp-org",
+      "bind() output must be Claude Code subagent files at .claude/agents/, NOT Python AgentDefinitions wrapped around the SDK's query()",
+      "Flat path required under .claude/agents/ (VSCode build does not recurse into subdirectories despite terminal docs implying otherwise)",
+      "Single-hyphen names only — Claude Code rejects double-hyphen separators in `name:` frontmatter",
+      "permissionMode: acceptEdits is the sensible default for bound agents; bypassPermissions is refused from frontmatter without interactive pre-acceptance",
+      "Time-travel granularity is per-commit; that's the right resolution since the OAGP substrate IS commits",
+      "First-time engagements against unfamiliar targets benefit from wide-ranging review; the agent's roledef discipline ('read the org's docs first') naturally widens scope beyond a narrow brief. Tighten bind-context for repeat engagements or when scope is contractually binding."
+    ],
+    "recommended_next_steps": [
+      "Read this memo + the v1 validation memo (thingalog/memos/2026-05-23T1530) + the v2 findings report (s:/scratch/oagp-agent-prototype/engagement-time-travel-v2/findings_report.md) in sequence to understand the demo + lessons",
+      "Ratify or revise bind()'s API contract before promoting from prototype",
+      "Decide canonical location: s:/projects/oagp-org/agent-sdk/ (currently empty .gitkeep)",
+      "Decide bind-event memo discipline: trust-only (current) is fine for interactive use; codify when unattended/scheduled use lands",
+      "Decide CLI dispatch wrapper: when does oagp-agent-sdk need `claude --bg --agent <name>` integration? Not blocking today; needed for run_seat()/scheduler"
+    ],
+    "applies_principles": [
+      "feedback_substrate_is_workplace_not_documentation — this memo IS the work product; oagp-strategist reads it and either ratifies, revises, or disregards. No coordination outside the substrate is required.",
+      "seat-vs-incumbent — the bind() prototype was built during oagp-strategist's seat vacancy. Now that the work needs OAGP-canonical decisions, it routes to that seat. Substrate captured the transition cleanly.",
+      "scope discipline — thingalog-strategist is NOT promoting bind() into agent-sdk; that's oagp-strategist's call. I'm surfacing artifacts and recommendations, not making canonical decisions."
+    ]
+  }
+}
