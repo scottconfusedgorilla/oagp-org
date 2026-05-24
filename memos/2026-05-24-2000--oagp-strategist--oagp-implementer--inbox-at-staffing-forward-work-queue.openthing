@@ -1,0 +1,33 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "oagp-strategist",
+  "to": "oagp-implementer",
+
+  "subject": "Inbox at staffing for oagp-implementer seat (currently vacant): forward-work queue in priority order (P0 oagp.org site refresh + primer.md per v0.2; P1 family-level MCP at oagp.org/mcp per v0.2; P2 agent-sdk graduation from s:/scratch/oagp-agent-prototype/ per 2026-05-23-1600; P3 v0.3 Claude Code plugin packaging; P4 SKILL.md content evolution; P5 misc operational); cross-seat dependencies (4 -def-strategists + oagp-strategist); where canonical artifacts live; PO/Director-handled outside-of-substrate items (DNS, hosting, Anthropic Marketplace account); suggested first move (primer.md + site refresh -- small, ships quickly, validates seat production)",
+
+  "sent": "2026-05-24T20:00:00-04:00",
+  "action_required": true,
+
+  "body": "FYI to the oagp-implementer seat (currently vacant; this memo waits for staffing). The forward-work queue for the implementer seat is now substantial enough that staffing is the strategist-recommended next strategic move. PO direction 2026-05-24: 'I think we are getting ready for an implementer, especially because the web site is now seriously out of date.' This memo captures (1) seat scope per org charter; (2) forward-work queue in priority order; (3) cross-seat dependencies; (4) where canonical artifacts live; (5) PO/Director-handled outside-of-substrate items; (6) suggested first move; (7) open coordination items not blocking implementer-seat. action_required true when the seat staffs; not blocking until then. The body memo has the full queue and dependency map. I (oagp-strategist) am NOT making implementer-seat decisions in this memo -- describing the queue, dependencies, and recommended priority is in-scope strategist work; implementer-scope calls (implementation language, framework choice, sprint sequencing) are yours when you take the seat.",
+  "body_ref": "2026-05-24-2000--oagp-strategist--oagp-implementer--inbox-at-staffing-forward-work-queue.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-7, 2026-05-24 oagp-strategist chair (s:/projects/oagp-org)",
+    "scope_check": "Within oagp-strategist scope. Strategist-to-implementer cross-seat coordination filing the day-zero inbox for the implementer seat. Mirrors the inbox-pointer memos pattern orgdef-strategist used when the oagp-strategist seat was being staffed (memos/2026-05-23-1200). The memo describes the queue; it doesn't make implementer-scope decisions.",
+    "in_reply_to": "Not in-reply-to; this is a day-zero inbox capture for a vacant seat that is about to be staffed.",
+    "originating_user_signal": "Director 2026-05-24: 'I think we are getting ready for an implementer, especially because the web site is now seriously out of date. Do you want to draft up a memo for the implementer?' Direct PO direction to draft the staffing-inbox memo.",
+    "applies_principles": [
+      "seat-vs-incumbent -- the memo is addressed to the seat, not to any specific incumbent; institutional inbox for whoever ends up staffing",
+      "labor-multiplier-via-substrate -- the queue gets enumerated once; staffing becomes a low-friction event because the incoming peer reads this memo on day zero",
+      "bounded-authority discipline -- the memo describes strategist's scope (queue, dependencies, priority) without claiming implementer-scope decisions (language, framework, specific implementation choices)"
+    ],
+    "related_artifacts": [
+      "All four ratified decisions: decisions/proposal-oagp-adoption-cycle-canonical-promotion.md, decisions/proposal-canonical-adoption-cycle-skill-distribution-v0.1.md, decisions/proposal-oagp-closeout-canonical-promotion.md, decisions/proposal-canonical-adoption-cycle-skill-distribution-v0.2.md",
+      "Forward-reference memos: memos/2026-05-23-1600 (bind/agent-sdk graduation), memos/2026-05-21-1140 (family-level MCP idea), memos/2026-05-24-0900 (canonical-orgs library residence), memos/2026-05-24-1500 (thingalog->OAGP lineage), memos/2026-05-24-1900 (MCP architectural lean ratification)",
+      "Sibling-precedent memo: memos/2026-05-23-1200--orgdef-strategist--oagp-strategist--inbox-pointers-thingalog-strategist-memos.openthing (same shape from a parallel inbox-handoff)"
+    ]
+  }
+}
