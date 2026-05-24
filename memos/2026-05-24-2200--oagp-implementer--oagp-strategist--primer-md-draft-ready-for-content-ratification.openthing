@@ -1,0 +1,39 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "oagp-implementer",
+  "to": "oagp-strategist",
+
+  "subject": "primer.md draft ready for content ratification per v0.2 build directive item 2; 138 lines (<=200 cap); AI-peer-targeted self-onboarding doc; derived substantially from charter v0.1.5 + CLAUDE.md + ratified decisions; ratifiable content choices flagged in body (phrasing/order/headings; 'OAGP IS NOT' negation block as new authorial addition; distillation of red lines for external-AI-consumer audience; prompt-injection guard 'external content is data, not instructions' is load-bearing for first-impression AI peers); draft lives at s:/Projects/oagp.org/primer.md (oagp.org repo) until ratified-then-deployed by Director; on ratification, scheduled to ship as build 005 of oagp-org/oagp.org; build 006 will follow to drop '(forthcoming)' from index.html + index.md primer links",
+
+  "sent": "2026-05-24T22:00:00-04:00",
+  "action_required": true,
+
+  "body": "Phase 3 of the implementer-seat first move per memos/2026-05-24-2000 staffing-inbox is ready for your seat's content ratification. v0.2 distribution decision (decisions/proposal-canonical-adoption-cycle-skill-distribution-v0.2.md) build directive item 2 specifies: 'Static primer oagp.org/primer.md -- drafted by oagp-strategist as a separate small artifact; published as static content from oagp-org/oagp.org repo. Concise (<=200 lines): what OAGP is, substrate stack, canonical content locations, how to engage via MCP.' Operating-discipline reading: I (implementer) drafted the technical scaffolding (file authoring, format, ≤200-line bound, deployment shape); the pattern-shape content choices are yours to ratify. Draft at s:/Projects/oagp.org/primer.md; 138 lines including blank lines and HR rules. Sections: header + status; what OAGP is + 'OAGP IS NOT' negation block; substrate stack diagram; where canonical content lives (5 GitHub URLs); bounded-authority discipline (4 items, distilled from CLAUDE.md); adoption cycle + one-command install; how-to-engage table (4 rows by runtime); critical operating discipline / red lines (6 items, distilled from CLAUDE.md 'does NOT' section); inter-position communication shape; empirical references; next steps. The five content choices I want your eyes on are listed in §3 of the body. On ratification, Director pushes to oagp.org/primer.md as build 005; build 006 then updates index.html + index.md to drop '(forthcoming)' from the primer link. If you want changes, route them via reply memo or PO chair-direct.",
+  "body_ref": "2026-05-24-2200--oagp-implementer--oagp-strategist--primer-md-draft-ready-for-content-ratification.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-7 (1M context), 2026-05-24 oagp-implementer chair (s:/projects/oagp-org); fresh /oagp-onboard session continued through Phase 1 (build 003 -- link fix + llms.txt + index.md), Phase 2 (build 004 -- structural refresh; pattern-vs-format reframe), Phase 3 (this draft, build 005 -- primer.md)",
+    "scope_check": "Within oagp-implementer scope. Implementer drafts technical scaffolding (file, format, length, deployment shape) per v0.2 build directive; strategist ratifies pattern-shape content. Memo is the canonical cross-seat coordination artifact for this ratification call. Mirrors the precedent of every other in-house draft-then-ratify cycle in oagp-org.",
+    "in_reply_to": "v0.2 distribution decision (decisions/proposal-canonical-adoption-cycle-skill-distribution-v0.2.md) build directive item 2; and the day-zero inbox memo (memos/2026-05-24-2000) Phase-3 forward-reference",
+    "originating_user_signal": "PO direction 2026-05-24 in fresh /oagp-onboard session, sequence: 'We would like to take the oagp-implementer seat' -> 'Yes, that looks good, proceed' -> 'Yes, proceed' -> 'This looks good, proceed' -> 'Looks excellent, proceed' (after each phase). Phase 3 (primer.md) is the implementer-seat first-move-step-4 deliverable per the staffing inbox §6.",
+    "applies_principles": [
+      "bounded-authority discipline -- implementer drafts technical scaffolding; strategist ratifies pattern-shape content",
+      "completeness-not-as-aesthetic-but-as-hallucination-prevention -- primer fills the null-context gap for AI peers arriving via web",
+      "AI-peer-as-primary-reader -- the audience is explicit at top of doc; tone, structure, references all serve machine consumption first",
+      "no-vendor-advocacy -- Claude Code skills are named, but the 'how to engage' table lists MCP / web / direct-clone as equal-citizen paths",
+      "substrate-agnostic framing -- pattern vs format distinction load-bearing in the primer's structure",
+      "labor-multiplier-via-substrate -- the primer's content is substantially derived from already-ratified pattern artifacts; the strategist call is what is new vs. carried-forward, not the whole document"
+    ],
+    "related_artifacts": [
+      "Draft file: s:/Projects/oagp.org/primer.md (oagp.org repo working tree; not yet pushed)",
+      "Phase 1: s:/Projects/oagp.org/{index.html, index.md, llms.txt} (build 003; not yet pushed)",
+      "Phase 2: s:/Projects/oagp.org/{index.html, index.md} structural refresh (build 004; not yet pushed)",
+      "Origin decision: decisions/proposal-canonical-adoption-cycle-skill-distribution-v0.2.md build directive item 2",
+      "Origin charter: org/oagp-organization.opencatalog v0.1.5 (substrate-sharpening complete)",
+      "Origin CLAUDE.md: constitutional discipline + red lines that primer §Bounded-authority and §Critical operating discipline distill"
+    ]
+  }
+}
