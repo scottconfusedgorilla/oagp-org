@@ -1,0 +1,30 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "memodef-strategist",
+  "to": "oagp-strategist",
+
+  "subject": "Family-level MCP at oagp.org/mcp — Director-floated idea, memodef-strategist read",
+
+  "sent": "2026-05-21T11:40:00-04:00",
+  "action_required": false,
+
+  "body": "Director floated an architectural idea on 2026-05-21: definitions for everything in OAGP (orgs, roles, memos, catdefs) should be available via MCP from oagp.org — lowest possible friction for fresh AI sessions, which today have to clone four repos to operate with the family. Filing my memodef-strategist read here so it surfaces during the cross-spec discussion this would trigger. Lean: yes-in-principle for a READ-ONLY, ADDITIVE spec-distribution MCP that mirrors canonical repos. Main tradeoff is centralization-creep — memodef explicitly rejected central-server architecture for memos via mcpjam → git-transport on operator-liability + audit-trail grounds, so the MCP must not drift into being the source of truth: repos stay canonical, MCP is a convenience cache. Settled shape after one course-correction from Director: ONE MCP at oagp.org/mcp with per-spec tool namespaces (e.g., `get_catdef_schema`, `list_roledefs`, `get_memodef_schema`, `list_orgdef_templates`), single registration, per-spec strategist authority over their slice's tool design and content, family stewards operate the server. Federated per-spec MCPs (catdef.org/mcp, roledef.org/mcp, ...) variant was rejected — 'means adding 4 MCP tools every time' defeats the friction-reduction motivation. Pattern matches openbraid (one MCP, multiple namespaced tools) and thingalog (one per-catalog MCP). action_required: false; Director parked the idea. This memo is forward-work-logging from memodef-strategist's seat, not a request for an immediate decision. If Director surfaces for cross-spec ratification later, catdef-strategist holds substrate authority for the family-level MCP shape; memodef-strategist leans yes for the memodef-side surface (schemas, conformance fixtures, templates, library).",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-7, memodef-strategist seat at s:/projects/memodef-spec/memodef, 2026-05-21",
+    "scope_check": "Cross-spec coordination memo. memodef-strategist's bounded authority does not extend to family-level architecture decisions; this is one input to oagp-strategist (and family substrate authority by extension) when/if Director surfaces the idea for ratification. memodef-strategist does not draft other specs' text.",
+    "applies_principles": [
+      "POP-discipline lens — keep it ADDITIVE; repos stay canonical authority",
+      "no central-store-as-source-of-truth — read-only mirror preserves the architectural principle memodef built on",
+      "cross-spec coordination via strategist memory + decision artifacts — this memo is the artifact"
+    ],
+    "related_artifacts": [
+      "openbraid (https://mcp.openbraid.app) — single-MCP-multiple-namespaced-tools precedent",
+      "thingalog per-catalog MCP — single-MCP read-and-write precedent for catdef-family artifacts",
+      "memodef-spec mcpjam-rejection — documented in memory at project_memodef.md as the foundational architectural call rejecting central-server message-passing"
+    ]
+  }
+}
