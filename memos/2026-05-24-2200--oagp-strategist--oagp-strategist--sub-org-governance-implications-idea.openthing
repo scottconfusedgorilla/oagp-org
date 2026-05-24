@@ -1,0 +1,44 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "oagp-strategist",
+  "to": "oagp-strategist",
+
+  "subject": "Sub-org case for /oagp-init: forward-reference for non-MVP enhancement; non-trivial governance implications worth surfacing now while design is fresh (sub-org Director authority scope, write-limits to subtree, merge gating, cross-subtree visibility, parent-org override); idea captured for future analysis cycle",
+
+  "sent": "2026-05-24T22:00:00-04:00",
+  "action_required": false,
+
+  "body": "Forward-reference idea memo to this seat. Filed per Director direction 2026-05-24 during /oagp-init design discussion: 'Agreed, parameter, but I don't think that's MVP. Now, you should absolutely file that as an idea, but it has all kinds of implications (among others, that means that we now have a human down further in the org chart, what does that actually mean? Are they write-limited to only their subtree?'. The standalone-org case is /oagp-init MVP; the sub-org case is forward work because it introduces a hierarchy that the current OAGP model doesn't address: OAGP assumes one Director at the top with bounded-authority discipline applying uniformly. A sub-org introduces a SECOND Director (or sub-Director-equivalent) lower in the org chart, with non-trivial implications: (1) Authority topology -- does the sub-org Director have full authority within their subtree, or is parent-org Director the ultimate ratifier? (2) Override -- can parent-org Director override sub-org decisions? Under what circumstances? (3) Merge gating -- if the sub-org has its own repo, who ratifies merges? Sub-org Director alone, or parent-org Director countersigns? (4) Write-limits -- per Director's question: 'Are they write-limited to only their subtree?' Probably yes for most filesystem/repo operations, but cross-subtree coordination memos must be possible. (5) Cross-subtree visibility -- can sub-org A see sub-org B's institutional history? By default? With permission? (6) Sub-org creation chain -- can a sub-org create its own sub-sub-orgs, recursively? Or is the hierarchy capped at depth-1? (7) Strategist-seat topology -- do sub-orgs have their own strategist seats, or do they inherit from the parent-org strategist? (8) Cross-org coordination conventions -- the current convention (memos to/from peer strategists) assumes peers; sub-org relationships aren't peer-shaped. This is a substantial proposal-cycle, not a minor enhancement. Bigger question lurking: does OAGP want to be a hierarchical-governance pattern (sub-orgs allowed), or does it stay flat (each org standalone, with peer coordination)? Both shapes are coherent; flat is the empirical default (each -def-spec is a peer of oagp-org structurally even if oagp-org consumes their formats). The sub-org enhancement would be a substantial pattern-shape evolution; not blocked, but warrants careful design when taken up.",
+  "body_ref": "2026-05-24-2200--oagp-strategist--oagp-strategist--sub-org-governance-implications-idea.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-7, 2026-05-24 oagp-strategist chair (s:/projects/oagp-org)",
+    "scope_check": "Within oagp-strategist scope. Filing a forward-reference idea memo to the seat's own institutional record per Director direction. The memo captures the question; it does NOT propose answers to the sub-org governance questions (those answers are forward analysis-cycle work).",
+    "in_reply_to": "Director direction 2026-05-24 during /oagp-init design discussion (no specific memo).",
+    "originating_user_signal": "Director 2026-05-24: 'Agreed, parameter, but I don't think that's MVP. Now, you should absolutely file that as an idea, but it has all kinds of implications (among others, that means that we now have a human down further in the org chart, what does that actually mean? Are they write-limited to only their subtree?'",
+    "applies_principles": [
+      "labor-multiplier-via-substrate -- the questions get captured once while the design discussion is fresh; future analysis-cycle work has them documented",
+      "Director-judgment-required-acknowledged -- the sub-org case requires substantial design work and Director-scope authority calls; this memo surfaces the questions without preempting Director's analytical space",
+      "feedback_substrate_is_workplace_not_documentation -- the memo IS the work product captured at the moment the question was identified"
+    ],
+    "related_artifacts": [
+      "proposals/oagp-init-canonical-promotion.md -- the parent decision that flagged sub-org as deferred",
+      "decisions/proposal-oagp-init-canonical-promotion.md -- the paired decision",
+      "skills/oagp-init/SKILL.md -- the canonical skill (sub-org case mentioned in 'Sub-org case (forward-reference; not MVP)' section)"
+    ],
+    "open_questions_for_future_analysis": [
+      "Authority topology: does the sub-org Director have full authority within their subtree, or is parent-org Director the ultimate ratifier?",
+      "Override: can parent-org Director override sub-org decisions? Under what circumstances?",
+      "Merge gating: if the sub-org has its own repo, who ratifies merges?",
+      "Write-limits: are sub-org humans write-limited to only their subtree?",
+      "Cross-subtree visibility: can sub-org A see sub-org B's institutional history?",
+      "Sub-org creation chain: can a sub-org create its own sub-sub-orgs, recursively?",
+      "Strategist-seat topology: do sub-orgs have their own strategist seats, or do they inherit?",
+      "Cross-org coordination conventions: the current peer-coordination convention doesn't fit sub-org relationships",
+      "Meta-question: does OAGP want to be hierarchical, or stay flat with peer coordination as the only inter-org relationship?"
+    ]
+  }
+}

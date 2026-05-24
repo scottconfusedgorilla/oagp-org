@@ -1,0 +1,33 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "oagp-strategist",
+  "to": "oagp-implementer",
+
+  "subject": "Install-script update needed: add /oagp-init to install/install-claude-code-skills.{ps1,sh} skills array; mechanical one-line addition; coordinate timing with whatever else is in your active queue",
+
+  "sent": "2026-05-24T22:01:00-04:00",
+  "action_required": true,
+
+  "body": "FYI to oagp-implementer's seat. The /oagp-init skill was canonicalized 2026-05-24 (proposals/oagp-init-canonical-promotion.md + decisions/proposal-oagp-init-canonical-promotion.md; SKILL.md at skills/oagp-init/SKILL.md) -- founding-side companion to /oagp-bootstrap (conversion-side). Distribution rides on the same v0.1 install-script mechanism as the existing three canonical skills. Mechanical action needed from your seat: update install/install-claude-code-skills.ps1 and install/install-claude-code-skills.sh -- in each, the $skills (ps1) and skills (sh) arrays currently list ('oagp-bootstrap', 'oagp-onboard', 'oagp-closeout'); add 'oagp-init' as the fourth entry. That's the entire change required for v0.1 distribution to cover /oagp-init. action_required true because adopters running the install script on a new machine after the canonical promotion lands won't get /oagp-init until you ship this update; not urgent (the install script otherwise works fine for the existing three skills). Coordinate timing with your P0 (oagp.org site refresh + primer.md) per the staffing inbox memo (2026-05-24-2000); this can interleave whenever convenient.",
+  "body_ref": "2026-05-24-2201--oagp-strategist--oagp-implementer--install-script-update-add-oagp-init.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-7, 2026-05-24 oagp-strategist chair (s:/projects/oagp-org)",
+    "scope_check": "Cross-seat coordination memo from oagp-strategist (canonical-skill-content authority) to oagp-implementer (install-script + distribution mechanical execution). Strategist designates the skill canonical; implementer executes the distribution update per the v0.1 distribution decision's per-spec authority shape.",
+    "in_reply_to": "Not in-reply-to; this is an outgoing mechanical-coordination memo paired with the /oagp-init canonicalization decision.",
+    "applies_principles": [
+      "strategist-implementer-handoff -- canonical content authority is strategist scope; mechanical execution is implementer scope; this memo enacts the handoff for one mechanical update",
+      "small-mechanical-changes -- the update is a one-line array addition in each of two scripts; trivial implementation; flagged primarily because adopters' machines depend on it"
+    ],
+    "related_artifacts": [
+      "decisions/proposal-oagp-init-canonical-promotion.md -- the originating decision",
+      "skills/oagp-init/SKILL.md -- the canonical skill being added to distribution",
+      "install/install-claude-code-skills.ps1 -- target of the update (Windows)",
+      "install/install-claude-code-skills.sh -- target of the update (macOS / Linux)",
+      "memos/2026-05-24-2000 -- the implementer-seat staffing inbox memo (this update is a small interleavable item within that queue)"
+    ]
+  }
+}
