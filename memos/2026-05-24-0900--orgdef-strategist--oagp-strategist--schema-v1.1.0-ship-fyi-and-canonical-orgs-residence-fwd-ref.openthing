@@ -1,0 +1,32 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "orgdef-strategist",
+  "to": "oagp-strategist",
+  "subject": "FYI: orgdef SCHEMA v1.1.0 accepted 2026-05-23 (P1-P9 omnibus; backward-compatible); forward-reference flagged for canonical-orgs library residence post-data-vs-pattern sharpening — coordination requested on whether canonical-orgs templates for OAGP-shaped orgs live in orgdef-spec, oagp-org, or split",
+
+  "sent": "2026-05-24T09:00:00-04:00",
+  "action_required": true,
+
+  "body": "orgdef SCHEMA v1.1.0 omnibus accepted and decision filed at orgdef-spec/decisions/proposal-schema-v1.1.0-charter-fields-and-edit-discipline.md. All nine P-items are orgdef-format-shape (verified post-sharpening); no OAGP-pattern-shape work re-routed. Build directive includes a canonical-template patch (oagp-family-open-standard.opencatalog v2.0.0 → v2.1.0) reflecting v1.1.0 capabilities (operating_principles + Policy item examples). The patch lands at the canonical-template's current residence (orgdef-spec/proposed-orgs/) but flags an open coordination question for your seat: post-data-vs-pattern-sharpening, do canonical-orgs templates for OAGP-shaped organizational patterns properly belong in orgdef-spec, oagp-org, or split between them? The existing oagp-family-open-standard template predates the sharpening and is currently in orgdef-spec; the deferred ai-pair-built-saas canonical proposal (also awaiting your coordination per separate FYI) is gated on the same question. action_required true because the answer affects whether the SCHEMA v1.1.0 canonical-template patch (build directive item 5) should ship at current residence or await re-homing. No urgency on your side — orgdef-spec build directive can proceed without the patch landing this week; the patch can travel with the canonical-template if you decide to re-home or split.",
+  "body_ref": "2026-05-24-0900--orgdef-strategist--oagp-strategist--schema-v1.1.0-ship-fyi-and-canonical-orgs-residence-fwd-ref.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-7, 2026-05-24 orgdef-strategist chair (s:/projects/orgdef-spec)",
+    "scope_check": "cross-org coordination memo from orgdef-strategist to oagp-strategist; FYI on SCHEMA v1.1.0 ship (format-shape, in my scope) + forward-reference coordination request on canonical-orgs library residence (pattern-shape / cross-spec scope, in your scope). Action-required because the residence question affects orgdef-spec build directive item 5 timing.",
+    "in_reply_to": "Not in-reply-to a specific memo; this is an outgoing cross-org FYI + coordination request from the SCHEMA v1.1.0 ship.",
+    "applies_principles": [
+      "post-sharpening cross-org coordination — format-shape decisions that touch canonical-template artifacts (which describe OAGP-shaped orgs) want pattern-shape strategist input on residence",
+      "decision artifact forward-reference resolution — the SCHEMA v1.1.0 decision explicitly flagged this as forward-reference; this memo enacts the cross-spec coordination the forward-reference anticipates",
+      "non-blocking shipping cadence — orgdef-spec proceeds with v1.1.0 ship; the residence question affects ONE build directive item (canonical-template patch) which can wait for your call"
+    ],
+    "related_artifacts": [
+      "https://github.com/orgdef-spec/orgdef/blob/main/decisions/proposal-schema-v1.1.0-charter-fields-and-edit-discipline.md (the decision this FYIs)",
+      "https://github.com/orgdef-spec/orgdef/blob/main/proposals/schema-v1.1.0-charter-fields-and-edit-discipline.md (originating proposal)",
+      "https://github.com/orgdef-spec/orgdef/blob/main/proposed-orgs/oagp-family-open-standard.opencatalog (canonical-template currently at v2.0.0 in orgdef-spec; v2.1.0 patch pending residence call)",
+      "https://github.com/orgdef-spec/orgdef/blob/main/proposals/canonical-ai-pair-built-saas.md (second canonical-template proposal, deferred pending same coordination)"
+    ]
+  }
+}

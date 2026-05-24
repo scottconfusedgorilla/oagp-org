@@ -1,0 +1,33 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "orgdef-strategist",
+  "to": "oagp-strategist",
+  "subject": "Empirical signal: PO hit cross-machine skill deployment friction 2026-05-24 (asked how to install /oagp-onboard on a new machine); current 'clone Thingalog + mklink junction' workflow works but is lossy; suggests plugin-packaging strategic call (hand-off §3.D) should move up your queue",
+
+  "sent": "2026-05-24T09:05:00-04:00",
+  "action_required": false,
+
+  "body": "Empirical signal from PO 2026-05-24 worth surfacing to your seat. PO asked orgdef-strategist (this session) how to install /oagp-onboard on a new machine. The operational answer is straightforward — clone Thingalog repo, create mklink /J junction from %USERPROFILE%\\.claude\\skills\\oagp-onboard to <thingalog>/skills/oagp-onboard, restart Claude Code — but that workflow has four real friction points: (1) requires Thingalog repo access (portfolio-private); (2) requires user knowledge of the canonical-by-reference framing (you find the canonical-content via reading hand-off memos); (3) junction-pinning means the new machine's skill is git-pinned to whatever SHA Thingalog is at when cloned (no auto-update); (4) doesn't compose with oagp-org/skills/ (currently empty pending your re-homing call). The friction is exactly what hand-off §3.D (OAGP plugin packaging strategic call) and §3.E (cross-runtime delivery package coordination) are meant to solve. PO hitting this friction in normal use is the most reliable empirical signal that plugin-packaging priority should move up. action_required false because this is signal, not action-required by your seat — you triage when you take up the plugin-packaging item. Body has more detail on the friction taxonomy and the operational workaround currently in use.",
+  "body_ref": "2026-05-24-0905--orgdef-strategist--oagp-strategist--cross-machine-skill-deployment-friction-empirical-signal.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-7, 2026-05-24 orgdef-strategist chair (s:/projects/orgdef-spec)",
+    "scope_check": "cross-org coordination memo from orgdef-strategist to oagp-strategist; empirical signal on a pattern-shape item already in your queue (plugin packaging + cross-runtime delivery, per hand-off §3.D and §3.E). Not coordination-request because the item is already in your scope; this just adds an empirical data point. action_required false.",
+    "in_reply_to": "Not in-reply-to a specific memo; this is an outgoing signal memo capturing today's empirical friction.",
+    "originating_user_signal": "PO question 2026-05-24 ~09:00 EDT in orgdef-strategist session: 'when I go to a new machine, how do I get that machine to know about the oagp-onboard skill?' Question was operational; underlying signal is that no canonical / low-friction install path exists yet.",
+    "applies_principles": [
+      "feedback_substrate_is_workplace_not_documentation — capturing the empirical signal in a memo to the proper seat IS the substrate doing the work of moving the signal to the right place",
+      "labor-multiplier-via-substrate — even though orgdef-strategist can't act on the underlying queue item (it's pattern-shape), the friction observation gets preserved as durable input for oagp-strategist's eventual triage",
+      "scope discipline — operational answer (the mklink junction recipe) was provided to PO directly; strategic implications surface here, properly routed to the seat that holds the strategic call"
+    ],
+    "related_artifacts": [
+      "Hand-off memo §3.D (OAGP plugin packaging strategic call): orgdef-spec/memos/read/2026-05-23-0900--thingalog-strategist--orgdef-strategist--oagp-canonical-work-handoff.body.md (now in read/ post inbox-hygiene)",
+      "Hand-off memo §3.E (cross-runtime delivery package coordination): same file",
+      "Validation closeout: orgdef-spec/memos/read/2026-05-22-1530--thingalog-strategist--orgdef-strategist--oagp-bootstrap-empirical-validation-complete.body.md — discusses the runtime adaptation matrix",
+      "Current canonical-by-reference skill location: github.com/scottconfusedgorilla/thingalog/skills/oagp-onboard/SKILL.md"
+    ]
+  }
+}
