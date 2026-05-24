@@ -1,8 +1,9 @@
 # install-claude-code-skills.ps1
 #
-# Installs the canonical OAGP adoption-cycle skills (/oagp-bootstrap,
-# /oagp-onboard) into the current user's Claude Code skills directory
-# via Windows filesystem junctions pointing at this clone of oagp-org.
+# Installs the canonical OAGP skills (/oagp-bootstrap, /oagp-init,
+# /oagp-onboard, /oagp-closeout) into the current user's Claude Code
+# skills directory via Windows filesystem junctions pointing at this
+# clone of oagp-org.
 #
 # After install, `git pull` in this repo keeps your skills current --
 # the junction tracks the working tree.
@@ -27,7 +28,7 @@ if (-not (Test-Path $skillsSource)) {
 
 New-Item -ItemType Directory -Force -Path $skillsDest | Out-Null
 
-$skills = @("oagp-bootstrap", "oagp-onboard", "oagp-closeout")
+$skills = @("oagp-bootstrap", "oagp-init", "oagp-onboard", "oagp-closeout")
 foreach ($skill in $skills) {
     $src = Join-Path $skillsSource $skill
     $dst = Join-Path $skillsDest   $skill

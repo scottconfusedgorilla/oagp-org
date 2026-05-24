@@ -2,9 +2,9 @@
 #
 # install-claude-code-skills.sh
 #
-# Installs the canonical OAGP adoption-cycle skills (/oagp-bootstrap,
-# /oagp-onboard) into the current user's Claude Code skills directory
-# via symlinks pointing at this clone of oagp-org.
+# Installs the canonical OAGP skills (/oagp-bootstrap, /oagp-init,
+# /oagp-onboard, /oagp-closeout) into the current user's Claude Code
+# skills directory via symlinks pointing at this clone of oagp-org.
 #
 # After install, `git pull` in this repo keeps your skills current --
 # the symlink tracks the working tree.
@@ -30,7 +30,7 @@ fi
 
 mkdir -p "$skills_dest"
 
-skills=("oagp-bootstrap" "oagp-onboard" "oagp-closeout")
+skills=("oagp-bootstrap" "oagp-init" "oagp-onboard" "oagp-closeout")
 for skill in "${skills[@]}"; do
     src="$skills_source/$skill"
     dst="$skills_dest/$skill"

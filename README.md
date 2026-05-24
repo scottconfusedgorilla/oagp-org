@@ -19,7 +19,7 @@ oagp-org/
 ├── proposals/                      ← draft pattern proposals
 ├── decisions/                      ← ratified strategist decisions
 ├── transcripts/                    ← per-seat reasoning records
-├── skills/                         ← canonical OAGP skills (/oagp-bootstrap, /oagp-onboard, future)
+├── skills/                         ← canonical OAGP skills (/oagp-bootstrap, /oagp-init, /oagp-onboard, /oagp-closeout)
 ├── install/                        ← cross-runtime install scripts
 ├── agent-sdk/                      ← agent-runtime bindings (roledefs → AgentDefinitions)
 ├── plugin/                         ← Claude Code plugin packaging (and future cross-runtime packages)
@@ -40,20 +40,21 @@ The pattern recommends catdef-family substrate for AI-peer-alignment, but does n
 
 ## Canonical skills
 
-Three skills bracket the OAGP cycles:
+Four skills bracket the OAGP cycles — two founding paths plus a session-cycle pair:
 
 **Adoption-cycle (one-shot per project):**
-- **`/oagp-bootstrap`** — founding-side; turns an existing project into an OAGP-shaped org → [skills/oagp-bootstrap/SKILL.md](skills/oagp-bootstrap/SKILL.md)
+- **`/oagp-bootstrap`** — founding via conversion; turns an existing project into an OAGP-shaped org → [skills/oagp-bootstrap/SKILL.md](skills/oagp-bootstrap/SKILL.md)
+- **`/oagp-init`** — founding via initialization; creates a new OAGP-shaped org from scratch (folder-only by default, git optional) → [skills/oagp-init/SKILL.md](skills/oagp-init/SKILL.md)
 
 **Session-cycle (every session):**
 - **`/oagp-onboard`** — opens a session; brings a fresh AI peer up to speed on an OAGP-shaped org → [skills/oagp-onboard/SKILL.md](skills/oagp-onboard/SKILL.md)
 - **`/oagp-closeout`** — closes a session; drafts a closeout memo and prompts the PO to save the transcript → [skills/oagp-closeout/SKILL.md](skills/oagp-closeout/SKILL.md)
 
-`/oagp-bootstrap` + `/oagp-onboard` designated canonical 2026-05-23 ([decisions/proposal-oagp-adoption-cycle-canonical-promotion.md](decisions/proposal-oagp-adoption-cycle-canonical-promotion.md)); `/oagp-closeout` designated canonical 2026-05-24 ([decisions/proposal-oagp-closeout-canonical-promotion.md](decisions/proposal-oagp-closeout-canonical-promotion.md)); all three migrated to oagp-org/skills/ canonical residence 2026-05-24 ([decisions/proposal-canonical-adoption-cycle-skill-distribution-v0.1.md](decisions/proposal-canonical-adoption-cycle-skill-distribution-v0.1.md)). When canonical web hosting at [oagp.org](https://oagp.org) is live, canonical content moves there.
+`/oagp-bootstrap` + `/oagp-onboard` designated canonical 2026-05-23 ([decisions/proposal-oagp-adoption-cycle-canonical-promotion.md](decisions/proposal-oagp-adoption-cycle-canonical-promotion.md)); `/oagp-closeout` designated canonical 2026-05-24 ([decisions/proposal-oagp-closeout-canonical-promotion.md](decisions/proposal-oagp-closeout-canonical-promotion.md)); `/oagp-init` designated canonical 2026-05-24 ([decisions/proposal-oagp-init-canonical-promotion.md](decisions/proposal-oagp-init-canonical-promotion.md)); all four migrated to oagp-org/skills/ canonical residence 2026-05-24 ([decisions/proposal-canonical-adoption-cycle-skill-distribution-v0.1.md](decisions/proposal-canonical-adoption-cycle-skill-distribution-v0.1.md)). Canonical web hosting at [oagp.org](https://oagp.org) is live with primer and overview.
 
 ## Quick install (Claude Code)
 
-To make `/oagp-bootstrap`, `/oagp-onboard`, and `/oagp-closeout` discoverable as skills in Claude Code on a new machine:
+To make `/oagp-bootstrap`, `/oagp-init`, `/oagp-onboard`, and `/oagp-closeout` discoverable as skills in Claude Code on a new machine:
 
 **Windows (PowerShell):**
 ```powershell
@@ -69,11 +70,11 @@ cd oagp-org
 ./install/install-claude-code-skills.sh
 ```
 
-The install script creates a junction (Windows) or symlink (Unix) from `~/.claude/skills/oagp-{bootstrap,onboard,closeout}` into this clone's `skills/` directory. Restart Claude Code; the skills become discoverable.
+The install script creates a junction (Windows) or symlink (Unix) from `~/.claude/skills/oagp-{bootstrap,init,onboard,closeout}` into this clone's `skills/` directory. Restart Claude Code; the skills become discoverable.
 
 To update later: `git pull` in this clone — the junction/symlink tracks the working tree, so updates land without re-installing.
 
-For non-Claude-Code runtimes (claude.ai web, ChatGPT, Gemini, Perplexity), a substrate-neutral primer URL is forthcoming as v0.2 of the distribution decision; until then, paste the relevant SKILL.md content directly.
+For non-Claude-Code runtimes (claude.ai web, ChatGPT, Gemini, Perplexity), fetch the substrate-neutral primer at [oagp.org/primer.md](https://oagp.org/primer.md) per the v0.2 distribution decision.
 
 ## Governance
 
