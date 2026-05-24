@@ -36,7 +36,7 @@ for skill in "${skills[@]}"; do
     dst="$skills_dest/$skill"
 
     if [ ! -d "$src" ]; then
-        echo "Warning: skill source not found: $src — skipping." >&2
+        echo "Warning: skill source not found: $src -- skipping." >&2
         continue
     fi
 

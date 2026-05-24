@@ -33,7 +33,7 @@ foreach ($skill in $skills) {
     $dst = Join-Path $skillsDest   $skill
 
     if (-not (Test-Path $src)) {
-        Write-Warning "Skill source not found: $src — skipping."
+        Write-Warning "Skill source not found: $src -- skipping."
         continue
     }
 
