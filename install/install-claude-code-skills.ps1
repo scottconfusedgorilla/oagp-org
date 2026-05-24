@@ -4,7 +4,7 @@
 # /oagp-onboard) into the current user's Claude Code skills directory
 # via Windows filesystem junctions pointing at this clone of oagp-org.
 #
-# After install, `git pull` in this repo keeps your skills current —
+# After install, `git pull` in this repo keeps your skills current --
 # the junction tracks the working tree.
 #
 # Usage:
@@ -21,7 +21,7 @@ $skillsSource = Join-Path $repoRoot     "skills"
 $skillsDest   = Join-Path $env:USERPROFILE ".claude\skills"
 
 if (-not (Test-Path $skillsSource)) {
-    Write-Error "Source skills directory not found at $skillsSource — are you running from inside an oagp-org clone?"
+    Write-Error "Source skills directory not found at $skillsSource -- are you running from inside an oagp-org clone?"
     exit 1
 }
 

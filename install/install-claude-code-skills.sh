@@ -6,7 +6,7 @@
 # /oagp-onboard) into the current user's Claude Code skills directory
 # via symlinks pointing at this clone of oagp-org.
 #
-# After install, `git pull` in this repo keeps your skills current —
+# After install, `git pull` in this repo keeps your skills current --
 # the symlink tracks the working tree.
 #
 # Usage:
@@ -24,7 +24,7 @@ skills_source="$repo_root/skills"
 skills_dest="$HOME/.claude/skills"
 
 if [ ! -d "$skills_source" ]; then
-    echo "Error: source skills directory not found at $skills_source — are you running from inside an oagp-org clone?" >&2
+    echo "Error: source skills directory not found at $skills_source -- are you running from inside an oagp-org clone?" >&2
     exit 1
 fi
 
