@@ -57,14 +57,14 @@ To make `/oagp-bootstrap`, `/oagp-onboard`, and `/oagp-closeout` discoverable as
 
 **Windows (PowerShell):**
 ```powershell
-git clone https://github.com/scottconfusedgorilla/oagp-org.git
+git clone https://github.com/oagp-org/oagp.git
 cd oagp-org
 .\install\install-claude-code-skills.ps1
 ```
 
 **macOS / Linux (Bash):**
 ```bash
-git clone https://github.com/scottconfusedgorilla/oagp-org.git
+git clone https://github.com/oagp-org/oagp.git
 cd oagp-org
 ./install/install-claude-code-skills.sh
 ```

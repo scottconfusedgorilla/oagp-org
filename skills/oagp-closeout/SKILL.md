@@ -133,5 +133,5 @@ The canonical transcript-save path is invariant across runtimes; only the save m
 - **Companion skill:** [/oagp-onboard](../oagp-onboard/SKILL.md) — opens the session-cycle
 - **Adoption-cycle skill:** [/oagp-bootstrap](../oagp-bootstrap/SKILL.md) — one-shot per project; runs once when adopting OAGP
 - **Substrate stack:** catdef (schema-as-data) → roledef → orgdef → memodef → transcriptdef (this skill produces a `memodef:Memo` and prompts a `memodef:Transcript` save)
-- **Empirical reference org:** [github.com/scottconfusedgorilla/oagp-org](https://github.com/scottconfusedgorilla/oagp-org) (this repo)
+- **Empirical reference org:** [github.com/oagp-org/oagp](https://github.com/oagp-org/oagp) (this repo)
 - **OAGP spec home:** [oagp.org](https://oagp.org) (when canonical)

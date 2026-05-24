@@ -10,7 +10,7 @@
 # the symlink tracks the working tree.
 #
 # Usage:
-#   git clone https://github.com/scottconfusedgorilla/oagp-org.git
+#   git clone https://github.com/oagp-org/oagp.git
 #   cd oagp-org
 #   ./install/install-claude-code-skills.sh
 #

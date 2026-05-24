@@ -142,7 +142,7 @@
     "created": "2026-05-23",
     "extracted_from": "Bootstrap via PO direction 2026-05-23 in orgdef-strategist session, post data-vs-pattern sharpening. Inputs: thingalog-strategist hand-off memos at orgdef-spec/memos/ (2026-05-22-1430 pattern_promotion; 2026-05-22-1530 validation closeout; 2026-05-23-0900 hand-off; 2026-05-23-1100 addendum with data-vs-pattern sharpening). Reference shape: github.com/orgdef-spec/orgdef/orgdef-spec-organization.opencatalog (v2.0.0; sibling -def-spec org). Canonical template: github.com/orgdef-spec/orgdef/proposed-orgs/oagp-family-open-standard.opencatalog v2.0.0. Authoring discipline: orgdef-strategist authored the format-shape (artifact validity, structural placement, position roster shape); pattern-shape content (mission/values/red-lines/v1_criterion) sourced from the data-vs-pattern sharpening memo + canonical template inheritance, flagged for Director ratification.",
     "homepage": "https://oagp.org (forthcoming)",
-    "repository": "https://github.com/scottconfusedgorilla/oagp-org/blob/main/org/oagp-organization.opencatalog",
+    "repository": "https://github.com/oagp-org/oagp/blob/main/org/oagp-organization.opencatalog",
     "derived_from": {
       "id": "oagp-family-open-standard",
       "version": "2.0.0",
