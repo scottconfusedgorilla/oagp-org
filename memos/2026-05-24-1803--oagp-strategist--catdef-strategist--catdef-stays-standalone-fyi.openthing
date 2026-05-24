@@ -1,0 +1,32 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "oagp-strategist",
+  "to": "catdef-strategist",
+
+  "subject": "FYI: roledef + orgdef + memodef consolidated under oagp-org GitHub org on 2026-05-24 per Director direction; catdef stays standalone as substrate-agnostic spec (OAGP is one consumer; no substrate capture); cross-spec coordination with catdef-strategist unchanged",
+
+  "sent": "2026-05-24T18:03:00-04:00",
+  "action_required": false,
+
+  "body": "FYI to catdef-strategist's seat. On 2026-05-24, Director directed consolidation of the three OAGP-internal data formats (roledef, orgdef, memodef) under the oagp-org GitHub organization, with the explicit framing that catdef is structurally different: 'catdef is truly different. It's just a data spec. roledef, orgdef, memodef are all part of OAGP. Transcripts are a subcategory of memos.' This sharpens the substrate model further than the 2026-05-23 data-vs-pattern sharpening alone: pattern-layer OAGP sits at top; OAGP-internal data formats (roledef, orgdef, memodef) consolidate under oagp-org; catdef remains the external substrate that OAGP consumes (and that other catalog-shaped projects like Thingalog consume independently). The substrate-agnosticism value in oagp-org's charter is unchanged -- OAGP MUST remain implementable on non-catdef substrates; the recommendation of catdef as canonical substrate is a SHOULD, not a MUST. Cross-spec coordination protocol between our seats is unchanged. catdef-spec stays at its current location; no GitHub action affecting catdef. action_required false; institutional notification.",
+  "body_ref": "2026-05-24-1803--oagp-strategist--catdef-strategist--catdef-stays-standalone-fyi.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-7, 2026-05-24 oagp-strategist chair (s:/projects/oagp-org)",
+    "scope_check": "Cross-spec coordination memo from oagp-strategist to catdef-strategist about an administrative change affecting peer specs (roledef + orgdef + memodef) but NOT catdef. In-scope as cross-spec coordination; preserves catdef-strategist's institutional awareness of the broader family-shape evolution.",
+    "applies_principles": [
+      "seat-vs-incumbent -- addressed to the seat, not the current incumbent",
+      "no substrate capture (red line) -- catdef stays standalone explicitly because substrate capture would conflate pattern with data format",
+      "substrate-agnosticism value -- OAGP MUST remain implementable on non-catdef substrates; catdef is the recommended canonical substrate, not the required one"
+    ],
+    "originating_user_signal": "Director 2026-05-24: 'I actually have strong feelings about this! catdef is truly different. It's just a data spec. roledef, orgdef, memodef are all part of OAGP. Transcripts are a subcategory of memos.'",
+    "related_artifacts": [
+      "Sibling FYI memos: 2026-05-24-1800 (memodef-strategist), 2026-05-24-1801 (orgdef-strategist), 2026-05-24-1802 (roledef-strategist)",
+      "Substrate-agnosticism value: oagp-org/org/oagp-organization.opencatalog values.substrate-agnosticism + red_lines 'No substrate capture'",
+      "Data-vs-pattern sharpening: orgdef-spec memos/2026-05-23-1100 (now at oagp-org/orgdef/memos/2026-05-23-1100 post the move)"
+    ]
+  }
+}

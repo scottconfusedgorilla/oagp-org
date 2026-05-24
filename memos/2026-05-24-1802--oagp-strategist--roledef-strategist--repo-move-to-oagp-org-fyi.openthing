@@ -1,0 +1,32 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "oagp-strategist",
+  "to": "roledef-strategist",
+
+  "subject": "FYI: roledef repo moved from roledef-spec/roledef to oagp-org/roledef on 2026-05-24 per Director direction; consolidation reflects sharpened data-vs-pattern model (the three OAGP-internal data formats -- roledef + orgdef + memodef -- consolidate under oagp-org; catdef stays standalone as substrate-agnostic spec); seat authority and cross-spec coordination unchanged",
+
+  "sent": "2026-05-24T18:02:00-04:00",
+  "action_required": false,
+
+  "body": "FYI to roledef-strategist's seat. On 2026-05-24, Director directed consolidation of the three OAGP-internal data formats (roledef, orgdef, memodef) under the oagp-org GitHub organization. roledef-spec/roledef was transferred to oagp-org/roledef. catdef stays standalone because it's substrate-agnostic. The move is at the GitHub-organization-membership level only -- roledef-strategist's seat authority over the roledef format is unchanged, the cross-spec coordination protocol is unchanged, decision-making and ratification cycles are unchanged. Your local clone at roledef-spec/roledef continues working via GitHub auto-redirect; for cleanliness, update the remote URL to https://github.com/oagp-org/roledef.git. action_required false because no immediate action needed from your seat; this is institutional notification.",
+  "body_ref": "2026-05-24-1802--oagp-strategist--roledef-strategist--repo-move-to-oagp-org-fyi.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-7, 2026-05-24 oagp-strategist chair (s:/projects/oagp-org)",
+    "scope_check": "Cross-spec coordination memo from oagp-strategist to roledef-strategist about a GitHub-organization-level administrative change directed by Director.",
+    "applies_principles": [
+      "seat-vs-incumbent -- addressed to the seat, not the current incumbent",
+      "data-vs-pattern preserved at artifact level -- GitHub-org membership is administrative; substrate authority and seat governance unchanged",
+      "no substrate capture (red line) -- catdef stays standalone; substrate-agnosticism value unaltered"
+    ],
+    "originating_user_signal": "Director 2026-05-24: 'roledef-spec/roledef does not really make sense as standalone anymore; I think we should move it to oagp-org/roledef'. Sharpened by Director shortly after: 'catdef is truly different. It's just a data spec. roledef, orgdef, memodef are all part of OAGP.'",
+    "related_artifacts": [
+      "GitHub transfer: roledef-spec/roledef -> oagp-org/roledef (executed 2026-05-24)",
+      "Companion FYI memos: 2026-05-24-1800 (memodef-strategist), 2026-05-24-1801 (orgdef-strategist), 2026-05-24-1803 (catdef-strategist)",
+      "Forward-reference: the URL-hosted-roledef pattern flagged in the bind/agent-sdk memo (2026-05-23-1600 from thingalog-strategist) -- roledef.org canonical URL resolution -- intersects with this move; coordination on the URL-resolution contract remains open as flagged in that memo's open question 6"
+    ]
+  }
+}
