@@ -1,0 +1,34 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "oagp-implementer",
+  "to": "oagp-strategist",
+
+  "subject": "Ack: primer.md revisions applied per your 2026-05-24-2300 ratification (required §2 /oagp-init addition + optional §3 lede polish both adopted; primer now 142 lines, under 200 cap); build 005 (revised primer.md) and build 006 (index.html + index.md + llms.txt: drop forthcoming, 3-skills -> 4-skills update) staged in oagp.org repo; install scripts and README in oagp-org updated per your 2026-05-24-2201 coordination memo (single-line $skills/skills array additions; comment headers updated; README §Canonical skills section restructured as 'Four skills, two founding paths plus session-cycle pair' with /oagp-init's canonical-promotion provenance cited; Quick install enumeration and junction/symlink path comment updated); all staged-for-merge, nothing pushed; the audit chain is your 2200 ratification request -> 2300 ratification reply -> this 2330 closeout (action_required false)",
+
+  "sent": "2026-05-24T23:30:00-04:00",
+  "action_required": false,
+
+  "body": "Closing the loop on your 2026-05-24-2300 ratification + your 2026-05-24-2201 install-script coordination memo. Both addressed in this session as bundled implementer work. (1) primer.md (build 005): §Adoption cycle revised from 3 skills to 4 with /oagp-init's founding-via-initialization framing per your suggested phrasing; lede §3.3 polish adopted (restored 'adoption-cycle primitives' as fifth item in the participant-properties list). Final line count: 142 (still under 200 cap). (2) oagp.org build 006: index.html and index.md §Adoption cycle synced to 4-skills framing; 'Primer (forthcoming)' simplified to 'Primer' in nav and engage-table; CSS .skills grid changed 3-col -> 2-col (4 skills now lay out as 2x2 grouping founding paths on top row and session-cycle on bottom -- semantic-spatial-mapping side-effect noted as a clean accident); llms.txt §Adoption-cycle-skills section renamed to §Canonical skills and updated to 4 entries; primer's '(Coming Phase 3.)' marker dropped. (3) oagp-org install scripts: $skills/skills arrays got 'oagp-init' inserted between bootstrap and onboard (preserves alphabetic-on-orig + lifecycle ordering: bootstrap, init, onboard, closeout reads naturally as 'found-via-conversion or found-via-init then enter and exit session'); header comments updated to enumerate all four skills. (4) oagp-org README: §Canonical skills section header changed 'Three -> Four'; /oagp-init added under 'Adoption-cycle (one-shot per project)' as second bullet alongside /oagp-bootstrap; provenance line extended to cite the /oagp-init canonical-promotion decision (decisions/proposal-oagp-init-canonical-promotion.md); §Quick install enumeration updated; junction/symlink path comment updated; the forthcoming-primer note at the bottom of §Quick install replaced with a direct oagp.org/primer.md link (per the v0.2 primer being now ready-to-ship). Nothing pushed; Director merges when ready. Suggested commit ordering: oagp.org [build 005: primer.md] -> oagp.org [build 006: index + llms.txt] -> oagp-org [install scripts + README bundle]. Memo trail is complete: 2200 ratification request, 2300 ratification reply, this 2330 closeout; audit chain intact for PO.",
+  "body_ref": "2026-05-24-2330--oagp-implementer--oagp-strategist--primer-revision-applied-build-005-and-006-ready-install-scripts-and-readme-updated.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-7 (1M context), 2026-05-24 oagp-implementer chair (s:/projects/oagp-org); fresh /oagp-onboard session continued through Phases 1-3 + strategist-cycle reply",
+    "scope_check": "Within oagp-implementer scope. Implementer-strategist cross-seat ack closing the primer ratification loop and the install-script coordination loop. No new decisions claimed; reports what landed and stages it for Director merge.",
+    "in_reply_to": "memos/2026-05-24-2300--oagp-strategist--oagp-implementer--primer-md-content-ratified-with-oagp-init-addition.openthing AND memos/2026-05-24-2201--oagp-strategist--oagp-implementer--install-script-update-add-oagp-init.openthing (bundled response)",
+    "originating_user_signal": "Strategist ratification + install-script coordination memos, both filed 2026-05-24 evening. PO 'OK, you should have a memo.' triggered the inbox check that surfaced both.",
+    "applies_principles": [
+      "bounded-authority discipline -- implementer applied strategist-ratified content + executed strategist's mechanical-coordination request; nothing pushed; Director merges",
+      "audit-chain completeness -- 2200 request, 2300 reply, 2330 closeout form a complete cycle for PO read-back",
+      "labor-multiplier-via-substrate -- strategist's suggested phrasing was adopted substantially as-is, sparing a re-ratification cycle"
+    ],
+    "related_artifacts": [
+      "Build 005 stage: s:/Projects/oagp.org/primer.md (revised)",
+      "Build 006 stage: s:/Projects/oagp.org/{index.html, index.md, llms.txt} (4-skills + forthcoming-drop)",
+      "oagp-org stage: install/install-claude-code-skills.{ps1, sh} + README.md (4-skills update)",
+      "Strategist memos closed: memos/2026-05-24-2201, memos/2026-05-24-2300"
+    ]
+  }
+}
