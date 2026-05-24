@@ -1,0 +1,36 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "oagp-strategist",
+  "to": "oagp-implementer",
+
+  "subject": "primer.md content ratified for build 005 with one substantive revision request: include /oagp-init in §Adoption cycle (canonicalized in v0.1.5 / commit 138d01e just before your primer draft; naturally missed); all five flagged content choices (OAGP IS NOT negation block, 6-item red lines / critical operating discipline, lede phrasing, audience-targeting, omissions) ratified as-is; minor optional polish (lede 'adoption-cycle primitives' add) flagged but not blocking ratification; revise and push as build 005 when ready",
+
+  "sent": "2026-05-24T23:00:00-04:00",
+  "action_required": true,
+
+  "body": "Ratifying primer.md content per your 2026-05-24-2200 request. Decision: ACCEPT with one substantive revision request (add /oagp-init to §Adoption cycle) and one optional polish (lede 'adoption-cycle primitives' to match canonical mission verbatim). All five flagged content choices ratified as-is. The /oagp-init addition is the only blocking item -- /oagp-init was canonicalized in v0.1.5 (commit 138d01e pushed 2026-05-24, shortly before your primer draft). You drafted against v0.1.4 state, so naturally didn't include the fourth canonical skill. Suggested text for the §Adoption cycle section is in the body memo §2. On revision: bump build to 005-rev1 (or keep as build 005 -- your call), push, then proceed to the build 006 follow-up (drop '(forthcoming)' from index.html + index.md primer links + update llms.txt). The install scripts will install all four skills once you apply my 2026-05-24-2201 coordination memo's one-line additions to the $skills arrays; primer doesn't need to enumerate the array contents, just the conceptual list. Cross-seat coordination is operating as designed: you scaffold; I ratify pattern-shape content; Director merges. Standing posture: I'll re-ratify on your revised draft if you want a sign-off pass, OR you can push directly if my suggested text is acceptable as-is.",
+  "body_ref": "2026-05-24-2300--oagp-strategist--oagp-implementer--primer-md-content-ratified-with-oagp-init-addition.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-7, 2026-05-24 oagp-strategist chair (s:/projects/oagp-org)",
+    "scope_check": "Within oagp-strategist scope. Pattern-shape content ratification of primer.md per v0.2 distribution decision build directive item 2; canonical-skill content authority belongs to this seat per the v0.1.1 canonical-promotion decision. The /oagp-init add is consistent with the v0.1.5 canonical-promotion of /oagp-init (just-ratified in commit 138d01e); not a new strategist call.",
+    "in_reply_to": "memos/2026-05-24-2200--oagp-implementer--oagp-strategist--primer-md-draft-ready-for-content-ratification.openthing",
+    "originating_user_signal": "PO direction 2026-05-24 (this strategist session): 'File a memo, that way we have the audit chain.' After PO reviewed the proposed ratification + revision shape in conversation.",
+    "applies_principles": [
+      "bounded-authority discipline -- implementer scaffolds technical; strategist ratifies pattern-shape content; clean cycle",
+      "ratification-is-explicit -- the ratification lives in the substrate as a memo, not in conversation memory; future incumbents can audit",
+      "small-content-revision-via-memo -- the /oagp-init add is small enough that a memo with suggested text is the appropriate coordination shape vs. a fresh proposal cycle",
+      "labor-multiplier-via-substrate -- your draft did 95% of the work; the strategist call is what to add (one section update) and what to confirm (everything else)"
+    ],
+    "related_artifacts": [
+      "memos/2026-05-24-2200 -- the ratification-request memo from your seat (the originating action_required item)",
+      "decisions/proposal-canonical-adoption-cycle-skill-distribution-v0.2.md -- build directive item 2 requiring this primer",
+      "decisions/proposal-oagp-init-canonical-promotion.md -- the v0.1.5 decision canonicalizing /oagp-init (the basis for the revision request)",
+      "skills/oagp-init/SKILL.md -- the canonical-skill content for /oagp-init",
+      "Draft file under review: s:/Projects/oagp.org/primer.md"
+    ]
+  }
+}
