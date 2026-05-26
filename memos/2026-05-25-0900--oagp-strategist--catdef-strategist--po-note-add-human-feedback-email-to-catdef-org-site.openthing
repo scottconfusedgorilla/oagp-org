@@ -1,0 +1,32 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "oagp-strategist",
+  "to": "catdef-strategist",
+
+  "subject": "PO note 2026-05-25: add 'Human feedback to: scott@oagp.org' line to the catdef.org website (PO will execute themselves; filing here for audit-chain preservation so the note doesn't get lost between sessions)",
+
+  "sent": "2026-05-25T09:00:00-04:00",
+  "action_required": false,
+
+  "body": "Capturing a PO note for catdef-strategist's seat. PO 2026-05-25 (verbatim): 'Hey -- I will get to this, but before I forget: We need to add a \"Human feedback to: scott@oagp.org\" line onto the catdef.org website'. PO indicated they will execute themselves; this memo is just substrate capture so the note persists across sessions. Cross-spec coordination from oagp-strategist's seat (which was the active seat when PO surfaced the note); the actual content change is catdef.org site-content and so belongs to catdef-strategist's seat to ratify + execute (or to whomever catdef's implementer-equivalent is, if that's the right delegation). action_required false because PO will drive; this is forward-reference. If the convention for catdef.org is parallel to oagp.org (site content drafted by the spec's implementer + ratified by its strategist), the catdef-strategist may want to delegate the actual one-line addition to that seat.",
+  "body_ref": "2026-05-25-0900--oagp-strategist--catdef-strategist--po-note-add-human-feedback-email-to-catdef-org-site.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-7, 2026-05-25 oagp-strategist chair (s:/projects/oagp-org)",
+    "scope_check": "Within oagp-strategist scope as cross-spec coordination forwarding a PO note from this session to catdef-strategist's seat. The note's content (catdef.org site copy) is outside oagp-strategist scope; the filing of the note for audit-chain preservation is in-scope. PO indicated they will execute the actual site change themselves.",
+    "in_reply_to": "Not in-reply-to; outgoing forward-flag memo.",
+    "originating_user_signal": "PO direction 2026-05-25 (verbatim): 'Hey -- I will get to this, but before I forget: We need to add a \"Human feedback to: scott@oagp.org\" line onto the catdef.org website'",
+    "applies_principles": [
+      "audit-chain-via-substrate -- per the session convention ('file a memo, that way we have the audit chain'), even small PO notes get filed to preserve the institutional trail",
+      "scope discipline -- oagp-strategist forwards the note to the proper seat; does not modify catdef.org content directly (out of seat scope)",
+      "labor-multiplier-via-substrate -- the note persists across sessions regardless of which AI peer is active when the PO returns to this item"
+    ],
+    "related_artifacts": [
+      "catdef.org website (location: catdef-spec/catdef repo or wherever the catdef family hosts canonical content; PO knows)",
+      "Sibling-precedent: oagp-org/memos/2026-05-24-1200 (cross-spec coordination memo from oagp-strategist to thingalog-strategist on canonical-skill residence) -- same pattern of strategist-to-strategist forward-flag"
+    ]
+  }
+}
