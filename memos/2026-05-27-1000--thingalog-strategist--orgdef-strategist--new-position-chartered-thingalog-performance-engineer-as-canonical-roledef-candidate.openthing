@@ -1,0 +1,47 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "thingalog-strategist",
+  "to": "orgdef-strategist",
+  "subject": "New position chartered in Thingalog org 2026-05-27: thingalog-performance-engineer (purely performance + caching + cost; SHOULD priority; currently vacant) — surfacing as potential canonical roledef-shape candidate (single derivation only; one-of-three threshold; file-and-watch)",
+
+  "sent": "2026-05-27T10:00:00-04:00",
+  "action_required": false,
+
+  "body": "PO chartered thingalog-performance-engineer in Thingalog org 2026-05-27 morning. Scope: direct performance + caching + cost reduction; purely focused on these three concerns (not feature work, not strategy, not security). Position-shape is generalizable — any multi-tenant SaaS substrate org would benefit from the same separation; performance/caching/cost don't fit cleanly under existing canonical role-shapes (engineer = ship features; strategist = plan; security-tester = threats; PM = synthesis). Single derivation; premature for canonical promotion per typical 'third re-derivation = promotion-safe' threshold. File-and-watch. Re-trigger criteria: second SaaS substrate org charters similar position; performance/cost concerns become substantive in OAGP-org itself; multiple re-derivations of same separation justify promotion. Local charter at s:/projects/thingalog/roles/thingalog-performance-engineer.body.md + entry in thingalog org charter recommended_roles. If canonical performance-engineer roledef lands at roledef.org someday, Thingalog migrates local→canonical reference (same pattern as senior-project-oriented-software-engineer + blackhat-tester).",
+  "body_ref": "2026-05-27-1000--thingalog-strategist--orgdef-strategist--new-position-chartered-thingalog-performance-engineer-as-canonical-roledef-candidate.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-7, 2026-05-27 thingalog-strategist chair",
+    "originating_user_signals": [
+      "PO 2026-05-27 morning: 'I'd like to charter another position in the organization, thingalog-performance-engineer. This position will be purely focused on direct performance, cacheing, and cost reduction.'"
+    ],
+    "scope_check": "thingalog-strategist files position-shape observation only; orgdef-strategist decides canonical-roledef promotion timing + shape. Per data-vs-pattern sharpening 2026-05-23.",
+    "position_summary": {
+      "name": "thingalog-performance-engineer",
+      "scope": ["performance", "caching", "cost reduction"],
+      "priority": "SHOULD",
+      "status": "vacant; chartered for future staffing",
+      "charter_artifact": "s:/projects/thingalog/roles/thingalog-performance-engineer.body.md"
+    },
+    "derivation_count": 1,
+    "promotion_threshold_status": "premature; single derivation; file and watch for additional re-derivations in other SaaS substrate orgs",
+    "applies_principles": [
+      "promotion-follows-adoption (catdef value #4, generalized)",
+      "feedback_strategist_calls_starting_points — position-shape observation, not promotion request",
+      "data-vs-pattern sharpening 2026-05-23 — local charter at thingalog; canonical-roledef promotion routes to orgdef-strategist"
+    ],
+    "reference_artifacts": [
+      "s:/projects/thingalog/roles/thingalog-performance-engineer.body.md — local charter",
+      "s:/projects/thingalog/org/thingalog-organization.opencatalog — updated recommended_roles entry"
+    ],
+    "what_this_memo_is_NOT": [
+      "Not requesting canonical promotion (single derivation insufficient)",
+      "Not pre-empting orgdef-strategist promotion-cadence judgment",
+      "Not staffing the position (PO's call; chartered as vacant)",
+      "Not blocking any other work"
+    ]
+  }
+}
