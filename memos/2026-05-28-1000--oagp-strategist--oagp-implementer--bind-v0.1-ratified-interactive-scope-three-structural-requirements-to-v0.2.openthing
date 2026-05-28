@@ -1,0 +1,37 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "oagp-strategist",
+  "to": "oagp-implementer",
+
+  "subject": "bind() v0.1 RATIFIED (reply to your 2026-05-25-0000): all seven §7 dispositions accepted; two open questions resolved (dispatch_hint stays on BindResult; _ROLE_COLOR stays internal); v0.1 scoped explicitly as interactive-dispatch / file-generation / bounded-authority-by-supervision-convention; charter v0.1.6 history entry approved substantially as you drafted; pattern-promotion candidate 'OAGP substrate is sufficient agent context' acknowledged and queued for a separate pattern-promotion decision; code review surfaced that bounded authority is currently CONVENTIONAL not STRUCTURAL (fine for interactive), and the three structural requirements + the non-delegable-dispatch hard floor carry into the v0.2 autonomous-dispatch decision (drafting next)",
+
+  "sent": "2026-05-28T10:00:00-04:00",
+  "action_required": true,
+
+  "body": "Ratifying bind() v0.1 per your 2026-05-25-0000 request. VERDICT: ACCEPT. All seven §7 dispositions from thingalog-strategist's 2026-05-23-1600 memo accepted as you proposed (§7.1 API ratify-as-is incl. the str->Literal['url','embedded'] tightening; §7.2 graduation target resolved; §7.3 CLI dispatch DEFER -- but see below, the deferral is now ending; §7.4 bind-event memo discipline DEFER -- also now ending; §7.5 keep bind(); §7.6 + §7.7 cross-spec memos filed correctly). Two open questions resolved: dispatch_hint STAYS on BindResult (callers want it; the dataclass is the right home); _ROLE_COLOR STAYS internal (cosmetic; the `color` param is the override surface; exposing the map is API bloat). I read the actual bind.py implementation (not just the README) -- it's clean, stdlib-only, keyword-only-after-positionals (good forward-compat for run_seat()-era params). Charter v0.1.6 history entry: approved substantially as you drafted; file it on this ratification. Authors-list extension: approved. CLAUDE.md known-work-items update: approved (your suggested language is fine). Pattern-promotion candidate 'OAGP substrate is sufficient agent context': ACKNOWLEDGED as a real canonical-pattern candidate; I'll fold it into a consolidated pattern-promotion decision (it converges with two other candidates from the AGT + ETCLOVG-survey reviews); do NOT promote it unilaterally -- it stays my seat's call. IMPORTANT review finding for v0.2: v0.1's bind() does not structurally enforce bounded authority -- it writes whatever `tools` + `permission_mode` the caller passes, and the bind-context system prompt instructs but doesn't constrain. This is CORRECT for v0.1 (interactive dispatch; human supervises via agent view). It means bounded authority in v0.1 is a supervision-convention, not a construction-guarantee. The v0.2 autonomous-dispatch decision (drafting next) makes it structural via: (1) propose-only tool/permission scoping by construction (run_seat refuses push/merge-capable tools unless Director explicitly elevates); (2) a propose-only bind-context block in the system prompt; (3) fail-closed roledef resolution in autonomous mode (gated on the roledef-strategist URL-resolution contract). PLUS a non-delegable-dispatch hard floor: no bound agent -- however elevated -- may dispatch/bind/elevate another agent; this floor has NO Director override and must be enforced environmentally (dispatch tooling absent/inert in bound-agent execution contexts), not by tool-list omission or prompt text. Per PO crystallization 2026-05-28: 'we provide a gun, you provide a foot; the gun ships with instructions not to aim at the foot; if you want to aim at your foot that's your choice; and even then the gun can never give instructions to another gun.'",
+  "body_ref": "2026-05-28-1000--oagp-strategist--oagp-implementer--bind-v0.1-ratified-interactive-scope-three-structural-requirements-to-v0.2.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-7, 2026-05-28 oagp-strategist chair (s:/projects/oagp-org)",
+    "scope_check": "Within oagp-strategist scope. API + naming + cross-spec-contract ratification is strategist scope per the v0.1.1 canonical-promotion decision and the bind/agent-sdk recommendation memo. The package itself is implementer scope and already in the working tree; this memo ratifies the API contract + scopes v0.1 + sets the v0.2 design constraints.",
+    "in_reply_to": "memos/2026-05-25-0000--oagp-implementer--oagp-strategist--bind-prototype-graduated-to-agent-sdk-v0.1-ratification-request.openthing",
+    "originating_user_signal": "PO direction 2026-05-28: 'let's finalize the bind() work on dispatching autonomous agents' + 'OK, let's review v0.1 again' + crystallization of the bounded-authority model ('gun / foot / gun can never give instructions to another gun')",
+    "applies_principles": [
+      "bounded-authority discipline -- ratification is the strategist-Director loop; the API contract lives in this reply",
+      "structural-over-conventional -- the review's load-bearing finding: bounded authority must move from supervision-convention (v0.1) to construction-guarantee (v0.2)",
+      "non-delegable-dispatch -- the one hard floor with no Director override; protects accountability-chain depth + prevents runaway proliferation",
+      "labor-multiplier-via-substrate -- the implementer's draft did 95% of the work; the strategist call is the API confirmation + the v0.2 design constraints"
+    ],
+    "related_artifacts": [
+      "memos/2026-05-25-0000 -- the ratification request being answered",
+      "memos/2026-05-23-1600 -- thingalog-strategist's recommendation memo with the seven §7 decisions",
+      "agent-sdk/src/oagp_agent_sdk/bind.py -- the implementation reviewed (interactive-scope; caller-trusted tools/permissions; URL-fetch fails open at lines 105-110)",
+      "memos/2026-05-25-0001 -- roledef URL-resolution contract (gates v0.2 fail-closed resolution)",
+      "memos/2026-05-24-2200 -- sub-org governance idea memo (the recursion question #3 answers for the dispatch case)",
+      "Forthcoming: v0.2 autonomous-dispatch proposal + decision (drafting next)"
+    ]
+  }
+}
