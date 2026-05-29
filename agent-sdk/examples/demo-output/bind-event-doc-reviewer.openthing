@@ -1,0 +1,24 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+  "from": "director",
+  "to": "doc-reviewer",
+  "subject": "Bind-event: dispatched 'doc-reviewer' bound to position 'doc-reviewer' as Tier-1 (propose-only) against org-state 53fb190230d98c9d6b71ea092ea5898f7ef97f7c",
+  "sent": "2026-05-29T16:00:00-04:00",
+  "action_required": false,
+  "body": "Autonomous bind-event audit record. Agent 'doc-reviewer' was dispatched bound to position 'doc-reviewer' at Tier 1 (authority: propose-only) against org-state SHA 53fb190230d98c9d6b71ea092ea5898f7ef97f7c. This memo is the audit trail that replaces live human supervision for this unattended dispatch. Brief and full grant detail in body_ref.",
+  "body_ref": "2026-05-29-1600--director--doc-reviewer--bind-event-doc-reviewer.body.md",
+  "metadata": {
+    "memo_subtype": "bind-event",
+    "agent_name": "doc-reviewer",
+    "position_id": "doc-reviewer",
+    "org_state_sha": "53fb190230d98c9d6b71ea092ea5898f7ef97f7c",
+    "tier": 1,
+    "granted_authority": [],
+    "roledef_id": "doc-reviewer",
+    "roledef_version": "0.1.0",
+    "roledef_source": "embedded",
+    "emitted_by": "oagp_agent_sdk.run_seat (autonomous dispatch)"
+  }
+}

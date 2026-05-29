@@ -169,7 +169,13 @@ def run_seat(
     # nested bind()/run_seat() inside it refuses. (Package-absence is the
     # backend's complementary deployment-layer floor.)
     dispatch_env = {BOUND_AGENT_ENV_MARKER: "1"}
-    handle = backend.dispatch(result.agent_file, brief=brief, env=dispatch_env)
+    handle = backend.dispatch(
+        result.agent_file,
+        brief=brief,
+        env=dispatch_env,
+        tier=tier,
+        granted_authority=granted,
+    )
 
     return DispatchRecord(
         agent_name=result.agent_name,

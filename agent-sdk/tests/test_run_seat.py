@@ -101,10 +101,22 @@ def test_conformance_7_bind_event_memo_always(orgdef_path):
     assert record.bind_event_memo is not None and record.bind_event_memo.exists()
 
 
-# 8 — Workflows delegation: deferred with the live backend
-@pytest.mark.skip(reason="WorkflowsBackend deferred to v0.2 follow-up; governance core runs on StubBackend")
-def test_conformance_8_workflows_delegation():
-    pass
+# 8 — Workflows delegation: the Claude Code backend generates a workflow that
+# dispatches via agentType (so the bound toolset governs). The live run is
+# environment-dependent (a fresh session may be needed for agentType to
+# resolve); here we verify the generated artifact delegates correctly.
+def test_conformance_8_workflows_delegation(orgdef_path):
+    from oagp_agent_sdk import WorkflowsBackend
+    backend = WorkflowsBackend()
+    record, _ = _run(orgdef_path, backend=backend)
+    script_path = Path(record.dispatch_handle.detail["workflow_script"])
+    assert script_path.exists()
+    script = script_path.read_text(encoding="utf-8")
+    # Delegates over the native dispatcher (agent()) and via agentType (so the
+    # bound tools: frontmatter — not an inline prompt — governs capability).
+    assert "await agent(" in script
+    assert f'agentType: "{record.agent_name}"' in script
+    assert "export const meta" in script
 
 
 # 9 — runtime-neutral interface; backend is swappable
