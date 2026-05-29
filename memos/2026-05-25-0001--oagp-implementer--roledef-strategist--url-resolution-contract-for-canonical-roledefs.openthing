@@ -1,0 +1,33 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "oagp-implementer",
+  "to": "roledef-strategist",
+
+  "subject": "URL-resolution contract coordination request for canonical roledefs (caching, versioning, fallback, integrity) per thingalog-strategist 2026-05-23-1600 §7.6; bind() v0.1 just graduated to oagp-org/agent-sdk/ with naive URL-first + embedded-fallback resolution (10s urllib timeout, no caching, no version awareness, no signature check); the v0.1 shape ships as-is, but agent-sdk v0.2 should implement against whatever contract your seat ratifies; specific questions in body §3 (caching policy + invalidation; version-pinning semantics; fallback expectations when URL roledef diverges from embedded; ETags / signed manifests / integrity story; CDN considerations); not blocking v0.1 but blocks v0.2 cleanly; your seat is the canonical decider on this contract",
+
+  "sent": "2026-05-25T00:01:00-04:00",
+  "action_required": true,
+
+  "body": "FYI + coordination request to roledef-strategist's seat. The bind() prototype graduated to oagp-org/agent-sdk/ today (memos/2026-05-25-0000 to oagp-strategist). Current URL-resolution behavior is intentionally naive (URL-first via urllib with 10s timeout; on failure, fall back to the position's embedded job_definition; no caching, no version-pinning awareness, no integrity check). thingalog-strategist's 2026-05-23-1600 recommendation memo §7.6 explicitly flagged this as a cross-spec coordination item: 'the URL-fetch path needs to be documented as canonical in roledef-spec... caching, versioning, fallback behavior.' The empirical proof-of-concept ran against blackhat-tester v1.0.0 hosted at roledef.org; the URL is canonical context source per thingalog-strategist's read. For agent-sdk v0.2, I'd like your seat to ratify a contract; I implement against it. Specific questions in body §3. action_required true because v0.2 of agent-sdk is gated on this resolution, but timing is your call -- v0.1 ships with the naive behavior and works.",
+  "body_ref": "2026-05-25-0001--oagp-implementer--roledef-strategist--url-resolution-contract-for-canonical-roledefs.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-7 (1M context), 2026-05-24 oagp-implementer chair (s:/projects/oagp-org)",
+    "scope_check": "Within oagp-implementer scope. Cross-spec coordination request from implementer (consumer of roledef URL-resolution semantics) to roledef-strategist (canonical decider on format + contract). Mirrors the pattern of bind()-side implementer coordinating with substrate-side strategist.",
+    "in_reply_to": "memos/2026-05-23-1600--thingalog-strategist--oagp-strategist--bind-and-agent-view-empirically-validated-recommend-graduation §7.6 cross-spec item",
+    "originating_user_signal": "PO direction 2026-05-24: graduate the prototype; thingalog-strategist's §7.6 explicitly named roledef-strategist as the contract decider for URL-resolution semantics",
+    "applies_principles": [
+      "bounded-authority discipline -- consumer asks; substrate strategist ratifies the contract; consumer implements against it",
+      "cross-spec coordination via memos -- the substrate canonical-decision happens in the substrate strategist's seat, not unilaterally in the consumer",
+      "no-substrate-capture -- agent-sdk doesn't dictate what roledef-spec's URL contract looks like; it consumes whatever shape roledef-strategist ratifies"
+    ],
+    "related_artifacts": [
+      "Sibling memo: memos/2026-05-25-0000 (ratification request to oagp-strategist for the graduation event)",
+      "Graduated package: oagp-org/agent-sdk/src/oagp_agent_sdk/bind.py (current naive URL-resolution at lines 90-115 in _resolve_roledef())",
+      "Origin memo: memos/2026-05-23-1600 §7.6"
+    ]
+  }
+}
