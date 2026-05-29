@@ -16,17 +16,16 @@ This alignment is why the prototype worked the first time, why time-travel bindi
 from oagp_agent_sdk import bind
 
 result = bind(
-    orgdef_path="path/to/org/<orgname>-organization.opencatalog",
-    position_id="security-tester",
-    initial_prompt="Read your role + the org's recent memos, then file a status memo back. Stop.",
+    orgdef_path="examples/demo-orgdef.opencatalog",   # bundled, runnable
+    position_id="doc-reviewer",
+    initial_prompt="Review the target doc and file a proposal. Propose-only. Stop.",
     tools=["Read", "Write", "Glob", "Grep"],
-    color="red",
 )
 
 print(f"Bound: {result.agent_name}")
 print(f"Dispatch: {result.dispatch_hint}")
-# -> Bound: security-tester
-# -> Dispatch: @security-tester
+# -> Bound: doc-reviewer
+# -> Dispatch: @doc-reviewer
 ```
 
 Then in Claude Code's agent view panel, start a new session and type the dispatch hint. The bound agent runs supervised; observe progress via the panel's per-session peek/attach.
@@ -65,15 +64,37 @@ from oagp_agent_sdk import run_seat
 
 # Tier 1 (default): propose-only autonomous dispatch
 record = run_seat(
-    orgdef_path="path/to/org/<orgname>-organization.opencatalog",
-    position_id="security-tester",
-    brief="Static-review the auth pipeline; file findings as a proposal memo.",
+    orgdef_path="examples/demo-orgdef.opencatalog",
+    position_id="doc-reviewer",
+    brief="Review the agent-sdk README; file improvement proposals. Propose-only.",
 )
 assert record.tier == 1                 # no Bash; cannot push/merge
 assert record.bind_event_memo.exists()  # audit trail for the unattended run
 ```
 
-**Dispatch backend.** `run_seat()` is the cross-vendor seam. On Claude Code it composes over the native Workflows-class dispatcher (live wiring deferred — current default is `StubBackend`, which records dispatch intent without launching; the governance core is fully exercisable against it).
+**Dispatch backend.** `run_seat()` is the cross-vendor seam. On Claude Code, `select_backend("auto")` returns the `WorkflowsBackend`, which generates a workflow that dispatches the bound agent via `agentType` (so the bound `tools:` frontmatter governs). `run_seat()` *generates* the dispatch artifacts; the **launcher** runs them (see below). `StubBackend` records dispatch intent for tests.
+
+### `launch_seat(orgdef_path, position_id, *, ...) -> LaunchRecord` (v0.2 — canonical autonomous dispatch)
+
+`launch_seat()` is the **canonical autonomous-dispatch operational layer** (ratified in [decisions/proposal-agent-sdk-v0.2-governance-addendum-autonomous-dispatch-constraints.md](https://github.com/oagp-org/oagp/blob/main/decisions/proposal-agent-sdk-v0.2-governance-addendum-autonomous-dispatch-constraints.md)). It is the single locus of two MUST-conventions:
+
+- **Launcher-per-dispatch (fresh session + `agentType`).** Autonomous dispatch MUST start a clean session per dispatch, against which the bound agent file pre-exists so `agentType` resolves and its `tools:` frontmatter binds. This is *why* it works, not a limitation: the session-start registry rule is what loads the structural Tier-1 bound. Inline / same-session dispatch is **barred** for autonomous use (it substitutes the workflow's broad default toolset). `launch_seat()` therefore always dispatches via `WorkflowsBackend` (agentType); it does not accept an inline backend.
+- **Tier-2 package-absence gate.** Tier-2 (elevated) autonomous dispatch is refused (`Tier2GateError`) unless the launcher verifies the dispatch environment cannot `import oagp_agent_sdk` — the in-band enforcement of the Tier-3 non-delegable floor for the Workflows path (where the `OAGP_BOUND_AGENT` env marker cannot reach a workflow-spawned subagent). Tier-1 needs no gate (safe by toolset). Until run in a verified package-absent environment, **Tier-1 is the only sanctioned autonomous path.**
+
+```python
+from oagp_agent_sdk import launch_seat, ClaudeCliLauncher
+
+# Tier-1 propose-only autonomous dispatch (default launcher records the
+# fresh-session command; pass ClaudeCliLauncher(execute=True) to spawn).
+record = launch_seat(
+    orgdef_path="examples/demo-orgdef.opencatalog",
+    position_id="doc-reviewer",
+    brief="Review the agent-sdk README; file improvement proposals. Propose-only.",
+)
+assert record.tier == 1 and record.tier2_gate_checked is False
+```
+
+The fresh-session spawn is environment-dependent: `StubSessionLauncher` (default) records the intent + the `claude` command that would run; `ClaudeCliLauncher(execute=True)` runs it. A fresh-session structural run (agentType, launcher-driven) is what closes the full end-to-end demo — see [examples/README.md](examples/README.md).
 
 ## Empirical lessons (encoded in defaults)
 
@@ -88,7 +109,7 @@ Six things learned from the prototype run against thingalog 2026-05-16; preserve
 
 ## Status
 
-**v0.2 — autonomous-dispatch governance core, 2026-05-29.** `run_seat()` + the three-tier structural bounded-authority model + bind-event memos + fail-closed roledef resolution, built per the [v0.2 consolidated build-direction](https://github.com/oagp-org/oagp/blob/main/memos/2026-05-29-1300--oagp-strategist--oagp-implementer--agent-sdk-v0.2-consolidated-build-direction.body.md). Conformance tests 1–7 + 9 pass against `StubBackend`; test 8 (live Workflows delegation) is deferred with the backend wiring.
+**v0.2 — autonomous dispatch, 2026-05-29.** `run_seat()` + the three-tier structural bounded-authority model + bind-event memos + fail-closed roledef resolution; live `WorkflowsBackend` (agentType dispatch); and `launch_seat()` — the canonical launcher-per-dispatch layer with the Tier-2 package-absence gate (per the [governance addendum](https://github.com/oagp-org/oagp/blob/main/decisions/proposal-agent-sdk-v0.2-governance-addendum-autonomous-dispatch-constraints.md)). All conformance tests pass (105 total). The propose-only dispatch flow is empirically validated (see [examples/](examples/)); the full structural end-to-end run is a fresh-session launcher run (`ClaudeCliLauncher(execute=True)`), environment-dependent.
 
 **v0.1 — graduated 2026-05-24** from prototype; **ratified 2026-05-28** by oagp-strategist (interactive scope; bounded authority by supervision-convention). Empirical proof: 2026-05-23 time-travel engagement (thingalog 2026-05-16 snapshot, bound as `security-tester`) surfaced C-1 + H-1 findings against current main.
 
@@ -99,8 +120,10 @@ Six things learned from the prototype run against thingalog 2026-05-16; preserve
 | `run_seat()` autonomous dispatch + three tiers | **Done (v0.2 core)** |
 | Bind-event memo filing | **Done (v0.2)** — every autonomous dispatch emits one |
 | Fail-closed roledef resolution | **Done (v0.2 interim)** — abort on URL failure absent explicit fallback |
-| Live Workflows-class dispatch backend (Claude Code) | Deferred follow-up; conformance test 8 gated on it |
-| Empirical `run_seat()` demo (unattended propose-only run filing proposal-memos) | Next milestone (needs live backend) |
+| Live Workflows-class dispatch backend (Claude Code) | **Done (v0.2)** — `WorkflowsBackend`, agentType dispatch |
+| `launch_seat()` launcher-per-dispatch + Tier-2 package-absence gate | **Done (v0.2)** — canonical autonomous-dispatch layer |
+| Empirical propose-only dispatch demo (reads substrate, files a proposal) | **Done** — see [examples/](examples/) |
+| Fresh-session structural end-to-end run (`ClaudeCliLauncher(execute=True)`) | Environment-dependent; closes the full demo when run from a real fresh session |
 | URL-resolution contract for canonical roledefs (caching, versioning, integrity) | Awaiting roledef-strategist reply ([memos/2026-05-25-0001](https://github.com/oagp-org/oagp/blob/main/memos/2026-05-25-0001--oagp-implementer--roledef-strategist--url-resolution-contract-for-canonical-roledefs.body.md)); swap interim fail-closed default for the ratified contract |
 | Caller-provided inline roledef override | When a use case surfaces (none yet) |
 

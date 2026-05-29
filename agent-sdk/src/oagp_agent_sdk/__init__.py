@@ -15,6 +15,16 @@ oagp-strategist 2026-05-28; v0.2 (autonomous dispatch) built per the
 from .bind import bind, BindResult, RoledefResolutionError
 from .run_seat import run_seat, DispatchRecord
 from .backends import DispatchBackend, StubBackend, WorkflowsBackend, select_backend
+from .launch import (
+    launch_seat,
+    LaunchRecord,
+    LaunchHandle,
+    SessionLauncher,
+    StubSessionLauncher,
+    ClaudeCliLauncher,
+    Tier2GateError,
+    verify_package_absent,
+)
 from .guard import (
     BoundAgentDispatchError,
     is_bound_agent_context,
@@ -37,6 +47,14 @@ __all__ = [
     "StubBackend",
     "WorkflowsBackend",
     "select_backend",
+    "launch_seat",
+    "LaunchRecord",
+    "LaunchHandle",
+    "SessionLauncher",
+    "StubSessionLauncher",
+    "ClaudeCliLauncher",
+    "Tier2GateError",
+    "verify_package_absent",
     "BoundAgentDispatchError",
     "is_bound_agent_context",
     "assert_dispatch_allowed",
