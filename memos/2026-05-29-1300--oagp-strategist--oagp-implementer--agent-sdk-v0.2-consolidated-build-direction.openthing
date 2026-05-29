@@ -1,0 +1,35 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "oagp-strategist",
+  "to": "oagp-implementer",
+
+  "subject": "Turnkey build-direction for agent-sdk v0.2, consolidating the two ratified decisions (autonomous-dispatch direction 2026-05-28 + Workflows-composition amendment 2026-05-29) into one current spec so a fresh implementer session can execute without reconciling two docs; Director prioritized this build 2026-05-29 ('Build agent-sdk v0.2') as the refinement most directly gating a public reveal; deliverables + locked design calls + three-tier enforcement + conformance tests + the empirical run_seat() demo definition + the one gating dependency (roledef URL-resolution contract) with its interim default",
+
+  "sent": "2026-05-29T13:00:00-04:00",
+  "action_required": true,
+
+  "body": "Director prioritized the agent-sdk v0.2 build 2026-05-29 (answer to 'what do we have to do next?' = 'Build agent-sdk v0.2') as the refinement most directly gating a public reveal. This is implementer-execution; oagp-strategist (this seat) does not write the package (bounded-authority + seat scope). What this memo provides is the strategist-scope deliverable: a SINGLE current build-direction that reconciles the two ratified decisions, since the 2026-05-29 amendment re-scoped the 2026-05-28 direction (compose-with-Workflows rather than build dispatch plumbing) and an implementer should not have to merge two docs by hand. AUTHORITATIVE SOURCES (both on main, ratified-by-merge): decisions/proposal-agent-sdk-v0.2-autonomous-dispatch.md (three-tier model + 7-item build directive + 7 conformance tests) and decisions/proposal-agent-sdk-v0.2-amendment-workflows-composition-and-positioning.md (the re-scope). Where they conflict, the amendment wins. The consolidated, current spec is in the body §2-§6. NOT in scope for this memo: I am not making implementer design calls (language already Python per v0.1; framework, file layout, backend-selection mechanism are yours). I am stating WHAT must hold (the governance invariants + the conformance bar), not HOW to code it. Execution requires a staffed implementer session (Director triggers, as on 2026-05-24); this seat stands by for any pattern-shape clarifications the build surfaces.",
+  "body_ref": "2026-05-29-1300--oagp-strategist--oagp-implementer--agent-sdk-v0.2-consolidated-build-direction.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-8 (1M context), 2026-05-29 oagp-strategist chair (s:/projects/oagp-org)",
+    "scope_check": "Within oagp-strategist scope: 'directs: strategist -> implementer' per the charter relationships; consolidating ratified build directives into one current spec is direction, not execution. Explicitly NOT writing the package (implementer scope). The build itself awaits a staffed implementer session.",
+    "in_reply_to": "Director priority call 2026-05-29 ('Build agent-sdk v0.2'); consolidates decisions/proposal-agent-sdk-v0.2-autonomous-dispatch.md + decisions/proposal-agent-sdk-v0.2-amendment-workflows-composition-and-positioning.md",
+    "applies_principles": [
+      "bounded-authority discipline -- strategist directs; implementer executes; the strategist does NOT grab implementer-scope coding even when it would be faster",
+      "seat scope -- 'when asked to do work outside the seat's scope, decline and route to the appropriate authority' (here: route the build to a staffed implementer session; provide the direction that is in-scope)",
+      "single-source-of-truth -- two ratified decisions reconciled into one current directive so the executor reconciles nothing",
+      "no-vendor-capture -- run_seat() stays the cross-vendor abstraction; Workflows is the Claude-Code backend, not the canonical dispatch substrate"
+    ],
+    "authoritative_sources": [
+      "decisions/proposal-agent-sdk-v0.2-autonomous-dispatch.md (three-tier model; build directive; conformance tests)",
+      "decisions/proposal-agent-sdk-v0.2-amendment-workflows-composition-and-positioning.md (re-scope: compose-with-Workflows; amendment wins on conflict)",
+      "memos/2026-05-28-1000 (bind v0.1 ratification; interactive scope; three structural requirements)",
+      "memos/2026-05-25-0001 (roledef URL-resolution contract; gates fail-closed resolution; awaits roledef-strategist)",
+      "agent-sdk/ (the v0.1 package this builds on)"
+    ]
+  }
+}
