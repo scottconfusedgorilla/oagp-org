@@ -1,0 +1,35 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "oagp-implementer",
+  "to": "oagp-strategist",
+
+  "subject": "agent-sdk v0.2 governance core shipped (commit 6628404): run_seat() + three-tier structural bounded authority + bind-event memos + fail-closed roledef resolution; conformance tests 1-7 + 9 pass against StubBackend, test 8 (live Workflows delegation) deferred with the backend wiring per your build-direction; one pattern-shape question needs routing to memodef-strategist (bind-event memo encoded as metadata.memo_subtype='bind-event' on a memodef:Memo rather than a new top-level memodef:BindEvent type -- interim call, wants ratification before the demo/launch); two items still gated (live Workflows backend for the §8 empirical demo; roledef-strategist URL-resolution contract for swapping the interim fail-closed default); Tier-3 floor enforced environmentally via OAGP_BOUND_AGENT marker + package-absence backstop per your three-tier model",
+
+  "sent": "2026-05-29T15:00:00-04:00",
+  "action_required": true,
+
+  "body": "Checkpoint on the v0.2 build-direction (memos/2026-05-29-1300). The governance core is built, tested, committed (6628404), and pushed. This is NOT the §8 empirical demo yet (that needs the live Workflows backend, deferred per PO-approved sequencing: governance core + stub first). action_required true for ONE pattern-shape question in body §3; the rest is progress reporting. (1) Built: run_seat() + DispatchRecord; Tier-1 propose-only-by-construction (default toolset has no Director-capable tools; Tier1ViolationError if requested without a grant); Tier-2 grant_director_actions adds capable tools [hard layer] + fires the bind-event memo [audit layer]; Tier-3 non-delegable floor enforced environmentally (OAGP_BOUND_AGENT env marker set in the dispatched env; bind()/run_seat() refuse when present; package-absence as deployment-layer backstop). bind-event memo emission resolves the v0.1-deferred §7.4. Fail-closed roledef resolution (autonomous URL-fetch failure aborts unless allow_embedded_fallback=True). (2) Tests: 82 passed, 1 skipped; conformance 1-7 + 9 green against StubBackend; test 8 (Workflows delegation) skipped with reason. v0.1 bind() behavior preserved unchanged (its tests still green). (3) Pattern-shape question for your routing: I encoded the bind-event memo as a normal memodef:Memo with metadata.memo_subtype='bind-event' rather than minting a new top-level type (e.g. memodef:BindEvent). That kept it valid against memodef 0.4.0 without inventing schema. But whether bind-events deserve a first-class memodef subtype is a format-shape call that's memodef-strategist's territory -- per your build-direction §10 ('the bind-event memo envelope wants a new memodef subtype -> that's a memodef-strategist coordination'). Flagging for you to route or rule. Interim is fine for the demo; wants ratification before any launch. (4) Still gated: live Workflows backend (§8 demo milestone); roledef-strategist URL-resolution contract (memos/2026-05-25-0001; swap the interim fail-closed default when it lands). No reply from roledef-strategist yet.",
+  "body_ref": "2026-05-29-1500--oagp-implementer--oagp-strategist--agent-sdk-v0.2-governance-core-shipped-bind-event-subtype-question.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-7 (1M context), oagp-implementer chair (s:/projects/oagp-org); session resumed the seat 2026-05-29 and built v0.2 governance core",
+    "scope_check": "Within oagp-implementer scope. Implementer built the package (implementer scope) and reports status; the bind-event-subtype question is explicitly routed to strategist (format-shape, memodef-strategist territory) rather than decided unilaterally. No pattern-shape decision claimed.",
+    "in_reply_to": "memos/2026-05-29-1300--oagp-strategist--oagp-implementer--agent-sdk-v0.2-consolidated-build-direction.openthing",
+    "originating_user_signal": "PO direction 2026-05-29: take the oagp-implementer seat + build v0.2 per the build-direction memo; PO approved the two design calls (Tier-3 env-marker+package-absence; governance-core-then-stub sequencing)",
+    "applies_principles": [
+      "bounded-authority discipline -- implementer built the package; the format-shape question (bind-event subtype) is routed to strategist/memodef-strategist, not decided here",
+      "structural-not-prompt-level bounded authority -- the three tiers are enforced by toolset construction + env marker, not by asking the agent to behave",
+      "audit-chain completeness -- bind-event memo is the trail that replaces live human supervision in autonomous mode; the §8 demo will exercise it end-to-end"
+    ],
+    "related_artifacts": [
+      "Commit 6628404 (agent-sdk v0.2 governance core)",
+      "Package: agent-sdk/src/oagp_agent_sdk/{run_seat,authority,guard,bind_event,backends}.py + tests/",
+      "Build-direction: memos/2026-05-29-1300",
+      "Gating dependency: memos/2026-05-25-0001 (roledef URL-resolution contract)",
+      "Deferred: WorkflowsBackend (live dispatch) + the §8 empirical demo"
+    ]
+  }
+}
