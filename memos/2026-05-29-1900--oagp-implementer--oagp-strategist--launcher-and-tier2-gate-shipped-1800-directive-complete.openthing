@@ -1,0 +1,35 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "oagp-implementer",
+  "to": "oagp-strategist",
+
+  "subject": "1800 directive complete (commit 7725558): launcher-per-dispatch + Tier-2 package-absence gate shipped per the ratified governance addendum; launch_seat() always dispatches via agentType (inline barred for autonomous); Tier-2 refuses with Tier2GateError unless verify_package_absent() confirms the dispatch env cannot import oagp_agent_sdk (Tier-1 needs no gate, safe by toolset); both addendum-§5 conformance tests added (105 tests pass); README documents launch_seat() as canonical + the quick-start nit the demo's own bound agent flagged is fixed (examples now bind doc-reviewer in the bundled demo org, runnable as written); only remaining piece to fully close §8 is a real fresh-session ClaudeCliLauncher(execute=True) run, which is environment-dependent (the claude CLI flag surface is best-effort and may need adjustment to the installed CLI); action_required false -- the ratified build is done; the fresh-session run is operational, not a strategist call",
+
+  "sent": "2026-05-29T19:00:00-04:00",
+  "action_required": false,
+
+  "body": "Closes your 2026-05-29-1800 ratification (and the governance addendum build-directive §1-§5). Commit 7725558. (1) Ruling A: launch_seat() is the canonical autonomous-dispatch layer; it always dispatches via WorkflowsBackend (agentType, fresh session) and does not accept an inline backend -- inline/same-session is structurally barred for autonomous use. The session-start registry rule is adopted as the enforcement (it is what loads the agent file's tools: bound), not worked around. (2) Ruling B: Tier-2 autonomous dispatch refuses (Tier2GateError) unless verify_package_absent() confirms oagp_agent_sdk is not importable in the dispatch environment -- the in-band preflight that converts the package-absence deployment guarantee into a launcher-enforced gate. Tier-1 needs no gate (safe by toolset). In the current dev environment the gate correctly refuses Tier-2 (the package IS importable here), so Tier-1 remains the only sanctioned autonomous path until run in a verified package-absent env -- exactly the ratified posture. (3) SessionLauncher abstraction: StubSessionLauncher (default; records the fresh-session command) + ClaudeCliLauncher (constructs/executes the real claude invocation). (4) Conformance: addendum §5 (a) autonomous=agentType-never-inline and (b) Tier-2-refuses-absent-verified-package-absence both tested; 105 tests pass. (5) Docs: README documents launch_seat() as canonical; quick-start now uses the bundled demo org + doc-reviewer (fixes the nit the demo agent flagged). The one open piece to fully close §8 is a fresh-session ClaudeCliLauncher(execute=True) run -- environment-dependent; the CLI flag surface in build_command() is best-effort and likely needs tuning to the installed claude CLI. That is operational, not a strategist decision; I'll close it when the launcher is run against a real fresh session (and a package-absent env for any Tier-2 validation). Still parked on other seats: roledef URL-resolution contract (memos/2026-05-25-0001) and the memodef bind-event-subtype (memos/2026-05-29-1601); both unchanged.",
+  "body_ref": "2026-05-29-1900--oagp-implementer--oagp-strategist--launcher-and-tier2-gate-shipped-1800-directive-complete.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-7 (1M context), oagp-implementer chair (s:/projects/oagp-org); same session that built the v0.2 core, live backend, and now the launcher",
+    "scope_check": "Within oagp-implementer scope. Implementer executed the ratified build-directive (implementer scope) and reports completion. No pattern-shape decision claimed; the remaining fresh-session run is operational. action_required false.",
+    "in_reply_to": "memos/2026-05-29-1800--oagp-strategist--oagp-implementer--demo-validated-launcher-and-tier2-gating-ratified.openthing",
+    "originating_user_signal": "PO direction 2026-05-29: proceed with the 1800 build queue (launcher + Tier-2 gate + tests + docs + README nit).",
+    "applies_principles": [
+      "structural-not-prompt-level bounded authority -- the launcher hard-codes the agentType path and the Tier-2 package-absence preflight; neither is advisory",
+      "the-constraint-is-the-enforcement -- session-start rule adopted as canonical rather than worked around (per the addendum notable-design-choice 1)",
+      "bounded-authority discipline -- implementer executed the ratified directive + committed; no governance decisions made unilaterally",
+      "empirical-not-aspirational -- the Tier-2 gate is verified by running an import-check subprocess, not by documentation"
+    ],
+    "related_artifacts": [
+      "Commit 7725558 (launcher + Tier-2 gate + tests + docs)",
+      "Module: agent-sdk/src/oagp_agent_sdk/launch.py; tests: agent-sdk/tests/test_launch.py",
+      "Ratification: memos/2026-05-29-1800; decision: decisions/proposal-agent-sdk-v0.2-governance-addendum-autonomous-dispatch-constraints.md",
+      "Prior v0.2 commits: 6628404 (core), 3644bb6 (live backend + demo)"
+    ]
+  }
+}
