@@ -1,0 +1,42 @@
+[project]
+name = "oagp-agent-sdk"
+version = "0.1.0"
+description = "OAGP agent-sdk: bind OAGP positions to runnable Claude Code subagents."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "OAGP", email = "implementer@oagp.org" }]
+keywords = ["oagp", "claude-code", "agent", "bounded-authority", "role-binding"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+Homepage = "https://oagp.org"
+Repository = "https://github.com/oagp-org/oagp"
+Documentation = "https://github.com/oagp-org/oagp/blob/main/agent-sdk/README.md"
+"Graduation memo" = "https://github.com/oagp-org/oagp/blob/main/memos/2026-05-23-1600--thingalog-strategist--oagp-strategist--bind-and-agent-view-empirically-validated-recommend-graduation.body.md"
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/oagp_agent_sdk"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = [
+    "integration: tests that hit external services or real OAGP-shaped orgs; skipped by default",
+]

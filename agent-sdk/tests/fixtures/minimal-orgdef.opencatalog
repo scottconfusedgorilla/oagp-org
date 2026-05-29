@@ -1,0 +1,69 @@
+{
+  "catdef": "1.4",
+  "orgdef": "1.0.0",
+  "type": "orgdef:Organization",
+  "id": "test-org",
+  "name": "Test Org",
+  "version": "0.1.0",
+
+  "mission": "Fixture orgdef for oagp-agent-sdk unit + integration tests. Not a real organization.",
+
+  "items": [
+    {
+      "type": "orgdef:Position",
+      "id": "test-tester",
+      "name": "Test Tester",
+      "status": "staffed",
+      "role_definition": {
+        "url": "https://example.invalid/nonexistent-roledef.json",
+        "job_definition": {
+          "id": "test-role",
+          "name": "Test Role",
+          "version": "0.1.0",
+          "identity": "You are a fixture role used for testing bind().",
+          "voice": "Direct.",
+          "guardrails": [
+            "Do nothing outside the test workspace.",
+            "Do not contact external services."
+          ],
+          "conversation_rules": [
+            "Reply briefly.",
+            "Confirm understanding before acting."
+          ],
+          "workflow": {
+            "phase_1": "Read the bind context.",
+            "phase_2": "Report back."
+          },
+          "output_contract": [
+            {
+              "name": "test-report",
+              "description": "A short markdown report of what you did.",
+              "schema": "markdown",
+              "destination": "workspace/report.md"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "orgdef:Position",
+      "id": "vacant-role",
+      "name": "Vacant Role",
+      "status": "vacant",
+      "role_definition": {
+        "job_definition": {
+          "id": "minimal-role",
+          "name": "Minimal Role",
+          "version": "0.0.1",
+          "identity": "Minimal identity."
+        }
+      }
+    },
+    {
+      "type": "orgdef:Position",
+      "id": "no-roledef",
+      "name": "Position Without Roledef",
+      "status": "vacant"
+    }
+  ]
+}
