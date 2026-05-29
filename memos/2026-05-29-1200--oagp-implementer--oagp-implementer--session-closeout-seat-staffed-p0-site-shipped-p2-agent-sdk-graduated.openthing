@@ -1,0 +1,35 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "oagp-implementer",
+  "to": "oagp-implementer",
+
+  "subject": "Session closeout: oagp-implementer seat staffed (first incumbent); P0 oagp.org site refresh shipped end-to-end (build 002 -> 006: GitHub-org link fix, llms.txt AI-discovery file, index.md canonical-markdown twin, substrate-sharpening structural refresh, primer.md, 4-skills sync); install scripts + README updated for /oagp-init; P2 bind() prototype graduated to agent-sdk v0.1 (Python package, 36 tests passing) with ratification request to oagp-strategist + cross-spec coordination memos to roledef-strategist (URL-resolution contract) and memodef-strategist (filename-timestamp sidebar); session work 2026-05-24 -> 2026-05-25, closed out 2026-05-29; pending: strategist ratification of agent-sdk v0.1 API + seven section-7 decisions + draft charter v0.1.6 entry, roledef-strategist URL-resolution contract (gates agent-sdk v0.2), primer-revision build-005/006 push (if not already merged by Director)",
+
+  "sent": "2026-05-29T12:00:00-04:00",
+  "action_required": false,
+
+  "body": "Institutional capture for the oagp-implementer seat (first incumbent; seat staffed this session). Session arc: fresh /oagp-onboard -> PO authorized seat staffing -> P0 (oagp.org site refresh) shipped end-to-end -> install-script + README updates for /oagp-init -> P2 (bind() agent-sdk graduation) built, tested, and handed to oagp-strategist for ratification. The session spanned 2026-05-24 evening into 2026-05-25 00:02 (memo timestamps); closeout filed 2026-05-29. Clean session-end: all implementer deliverables landed; the only open items await OTHER seats' responses (strategist ratification; roledef-strategist contract), not blocked on implementer continuation. Full detail in body_ref. Next implementer session reads this memo first, then checks whether strategist has ratified the agent-sdk v0.1 API (memos/2026-05-25-0000) and whether roledef-strategist has replied on the URL-resolution contract (memos/2026-05-25-0001).",
+  "body_ref": "2026-05-29-1200--oagp-implementer--oagp-implementer--session-closeout-seat-staffed-p0-site-shipped-p2-agent-sdk-graduated.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-7 (1M context), oagp-implementer chair, s:/projects/oagp-org. Session 2026-05-24 -> 2026-05-25; closeout filed 2026-05-29.",
+    "scope_check": "Within oagp-implementer scope. Closeout memo is institutional capture for the seat the session occupied (oagp-implementer, staffed this session). from=to=oagp-implementer per the seat-vs-incumbent convention. No pattern-shape decisions claimed; the agent-sdk API ratification and pattern-promotion candidate ('OAGP substrate is sufficient agent context') are explicitly held open for oagp-strategist.",
+    "applies_principles": [
+      "seat-vs-incumbent -- memo addressed to the seat, not this session; the next implincumbent reads it on onboard",
+      "institutional-not-narrative -- durable state capture (what shipped, what's pending, what awaits which seat), not a retrospective",
+      "closeout-is-content-not-approval -- filing this does NOT ratify the agent-sdk v0.1 API or merge the pending charter v0.1.6 entry; drafts remain drafts; Director merges, strategist ratifies",
+      "bounded-authority discipline -- implementer shipped implementer-scope deliverables (site, package); pattern-shape ratifications routed to strategist via action-required memos"
+    ],
+    "related_artifacts": [
+      "Staffing: org/oagp-organization.opencatalog (implementer status vacant->staffed; incumbent record); CLAUDE.md roles table; memos/2026-05-24-2100 (seat-accepted)",
+      "P0 oagp.org (oagp-org/oagp.org repo): commit 41cac11 build 006 (index.html, index.md, llms.txt, primer.md)",
+      "Install + README: oagp-org/oagp commit 0dd97e0",
+      "Primer ratification cycle: memos/2026-05-24-2200 (request), 2300 (strategist ratify w/ /oagp-init), 2201 (install coordination), 2330 (implementer ack)",
+      "P2 agent-sdk: oagp-org/oagp commits 4a1f691 (package + ratification memo) + dcfbf3f (cross-spec memos); agent-sdk/ package; memos/2026-05-25-0000 (strategist ratification request), 2026-05-25-0001 (roledef URL-resolution), 2026-05-25-0002 (memodef filename-timestamp sidebar)",
+      "Origin: memos/2026-05-23-1600 (bind graduation recommendation), 2026-05-24-2000 (day-zero inbox queue)"
+    ]
+  }
+}
