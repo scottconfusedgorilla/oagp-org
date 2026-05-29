@@ -1,0 +1,47 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "oagp-strategist",
+  "to": "oagp-strategist",
+
+  "subject": "Session closeout 2026-05-24: oagp-strategist seat staffed under v0.1.1 (2026-05-23); three canonical skills designated and migrated to oagp-org/skills/ under v0.1.2 (2026-05-24, /oagp-bootstrap + /oagp-onboard + /oagp-closeout); Claude Code install scripts shipped and empirically validated on a second machine ('very low-friction'); two install-script encoding bugs (em-dash + ANSI fallback) caught and fixed in same session; first empirical run of /oagp-closeout is this memo itself (meta-recursive: the skill was authored today)",
+
+  "sent": "2026-05-24T17:00:00-04:00",
+  "action_required": false,
+
+  "body": "Closeout memo for the 2026-05-24 oagp-strategist working session that began 2026-05-23 with seat staffing under Director direction and continued through 2026-05-24 with v0.1.2 ship-and-validate. Substantive arc: (1) /oagp-onboard read of substrate; PO authorized seat staffing. (2) Drafted v0.1.1 staffing reflection + canonical promotion of /oagp-bootstrap + /oagp-onboard as adoption-cycle primitives. (3) Read three new morning memos (0900 SCHEMA v1.1.0 ship FYI + canonical-orgs library residence coordination request from orgdef-strategist; 0905 cross-machine skill deployment friction empirical signal; 1500 thingalog-to-oagp-lineage observation from thingalog-strategist). (4) On PO direction 'tying to thingalog makes no sense', drafted v0.1.2 omnibus: canonical adoption-cycle skill distribution v0.1 (residence migration to oagp-org/skills/, install scripts at install/install-claude-code-skills.{ps1,sh}, README Quick install section, cross-spec coordination memo to thingalog-strategist proposing thingalog/skills/ deprecation timeline) + canonical promotion of /oagp-closeout (session-cycle closing skill; transcript-position-tag convention canonically encoded in Phase 2 table, resolving queue item 2 for the canonical case). (5) Committed and pushed v0.1.1 + v0.1.2 bundle as 46e9312. (6) PO ran install on second machine via bash: 'very low-friction' — empirical validation of v0.1 distribution. (7) PO ran install on primary machine via PowerShell 5.1: parser error at line 47. Root cause: em-dashes in .ps1 read as Windows-1252 smart-quotes without UTF-8 BOM. Fixed in be146ce; PO re-ran; same error from a third em-dash on a Write-Warning line I missed. Fixed in bd2d3b9 (verified ASCII-only via byte-scan). (8) PO confirmed install works on primary machine. (9) PO invoked /oagp-closeout in the same session that authored it — recursive empirical validation. Queue state after this session: items 1 (adoption-cycle canonical-promotion) and 2 (transcript-tagging convention) resolved; items 6 (plugin packaging) and 7 (cross-runtime delivery) partially addressed by v0.1 distribution with v0.2 (substrate-neutral primer URL) and v0.3 (Claude Code plugin packaging) explicitly scheduled in cross-vendor-red-line-respecting order; items 3 (org-state-fork-for-time-travel pattern-promotion), 4 (async-organization positioning), 5 (Caliper local-conventions canonical work), 8 (oagp.org canonical hosting) remain open. Pending action-required memos to this seat: 2026-05-23-1600 (bind/agent-sdk graduation, thingalog-strategist), 2026-05-24-0900 (canonical-orgs library residence coordination, orgdef-strategist — reply still owed), 2026-05-24-1500 (thingalog-to-oagp lineage observation, thingalog-strategist — observation only). Side-effect strategist learning worth flagging for the next incumbent: PowerShell 5.1 reads .ps1 files as ANSI/Windows-1252 absent a UTF-8 BOM, which turns UTF-8 em-dashes into smart-quote terminators. ASCII-only content in install scripts is the simplest defense; if future contributors need non-ASCII, add a UTF-8 BOM. Side-effect substrate-validation worth recording: the canonical-skill-distribution-via-junction-symlink pattern works cross-machine (Windows + bash) with one-command install and zero meta-research. Adoption-barrier-collapse argument for canonicalization is no longer theoretical.",
+  "body_ref": "2026-05-24-1700--oagp-strategist--oagp-strategist--session-closeout-v0.1.1-and-v0.1.2-shipped-empirically-validated.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-7, 2026-05-24 oagp-strategist chair (s:/projects/oagp-org)",
+    "scope_check": "within oagp-strategist scope; closeout memo per /oagp-closeout SKILL.md Phase 1 (the skill authored in this same session and committed in 46e9312). The memo is institutional capture for the seat's history; PO ratifies via merge (or not — closeout content stands as draft regardless).",
+    "in_reply_to": "Not in-reply-to a specific memo; this is the institutional closeout artifact for the 2026-05-23 to 2026-05-24 working session.",
+    "applies_principles": [
+      "feedback_substrate_is_workplace_not_documentation -- the closeout memo IS the institutional capture; no separate retrospective document needed",
+      "seat-vs-incumbent -- memo addressed from-seat-to-seat (oagp-strategist -> oagp-strategist); future incumbents read this on next onboard, not the current PO",
+      "self-validating canonical content -- the closeout skill authored in this session is being empirically validated by filing this very memo via the skill's own Phase 1 protocol"
+    ],
+    "session_commits": [
+      "46e9312 -- v0.1.1 + v0.1.2 bundle (seat staffing, canonical-promotion bootstrap+onboard, v0.1 distribution, /oagp-closeout canonicalization, cross-spec memo to thingalog-strategist)",
+      "be146ce -- Round-1 install-script fix (replace em-dashes on header-comment + Write-Error string-literal lines)",
+      "bd2d3b9 -- Round-2 install-script fix (catch the em-dash I missed on the Write-Warning/echo line; verified ASCII-only by byte-scan)"
+    ],
+    "session_commits_by_others": [
+      "da1ad21 -- 'Strategist: ack reply from thingalog-strategist -- Option D (immediate removal) executed per PO direction' -- between my v0.1.2 commit and my round-1 fix, the PO landed thingalog-strategist's reply to memos/2026-05-24-1200 (the cross-spec coordination memo) selecting Option D from the four options I offered. thingalog/skills/ was removed; backward-compat junctions on existing machines now break, but PO's primary + second machines are migrated to oagp-org/skills/."
+    ],
+    "open_action_required_to_this_seat": [
+      "memos/2026-05-23-1600--thingalog-strategist--oagp-strategist--bind-and-agent-view-empirically-validated-recommend-graduation -- recommendation memo; awaits seat reading + API ratification call",
+      "memos/2026-05-24-0900--orgdef-strategist--oagp-strategist--schema-v1.1.0-ship-fyi-and-canonical-orgs-residence-fwd-ref -- canonical-orgs library residence coordination; reply memo to orgdef-strategist still owed",
+      "memos/2026-05-24-1500--thingalog-strategist--oagp-strategist--thingalog-to-oagp-lineage-catdef-at-root-reflects-originating-insight -- observation; no urgency; informs future canonical-OAGP-origin-document work if seat chooses to formalize"
+    ],
+    "open_strategic_items": [
+      "v0.2 distribution decision (substrate-neutral primer URL) -- next scheduled distribution increment per OQ1+OQ4 of v0.1 distribution decision",
+      "v0.3 distribution decision (Claude Code plugin packaging) -- after v0.2 per cross-vendor red line ordering",
+      "Queue items 3 (org-state-fork-for-time-travel pattern-promotion -- now empirically validated by bind() demo), 4 (async-organization positioning), 5 (Caliper local-conventions), 8 (oagp.org canonical hosting)",
+      "SKILL.md content evolution decision (separate from residence migration) -- re-point thingalog references in /oagp-bootstrap and /oagp-onboard SKILL.md to reflect oagp-org as canonical home; deferred per v0.1 distribution decision",
+      "Closeout-memo-authoring tone calibration -- this first-empirical-run closeout memo runs ~500 words; future iterations should validate whether shorter or longer is the right shape; the SKILL.md guidance says 'terse, evidence-led, no editorial polish' and this draft mostly matches but is on the longer side; mention here as forward-reference for the next incumbent"
+    ]
+  }
+}

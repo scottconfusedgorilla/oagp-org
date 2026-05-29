@@ -1,0 +1,41 @@
+{
+  "catdef": "1.4",
+  "memodef": "0.4.0",
+  "type": "memodef:Memo",
+
+  "from": "oagp-strategist",
+  "to": "oagp-strategist",
+
+  "subject": "Session closeout 2026-05-29: GitHub-org consolidation (v0.1.3) + family-level MCP distribution v0.2 + /oagp-init canonical promotion (v0.1.5) + bind() v0.1 ratified + agent-sdk v0.2 autonomous-dispatch direction (three-tier bounded-authority model) + two positioning reviews (Microsoft AGT, ETCLOVG harness survey) surfacing three queued pattern-promotion candidates; supersedes the stale uncommitted 2026-05-24-1700 mid-session checkpoint",
+
+  "sent": "2026-05-29T12:00:00-04:00",
+  "action_required": false,
+
+  "body": "Closeout for the oagp-strategist working session spanning 2026-05-24 (post the 1700 checkpoint) through 2026-05-29. SHIPPED (committed + pushed): (1) v0.1.3 -- GitHub-org consolidation: roledef/orgdef/memodef moved under oagp-org, catdef stays standalone, oagp-online -> oagp-org/oagp.org, openmemo-spec archived; canonical-adoption-cycle-skill-distribution v0.2 (family-level MCP at oagp.org/mcp ratifying memodef-strategist's 2026-05-21 lean); four cross-spec FYI memos (1800/1801/1802/1803) + MCP-ratification memo (1900). (2) v0.1.5 -- /oagp-init canonical promotion (founding-side companion to /oagp-bootstrap; folder-only default, git optional; sub-org case deferred to forward-reference idea memo 2026-05-24-2200); install-script coordination memo to implementer (2201). (3) Internal-URL cleanup post-repo-rename (scottconfusedgorilla/oagp-org -> oagp-org/oagp; operational content updated, historical artifacts preserved). (4) catdef.org 'Human feedback to: scott@oagp.org' PO note forward-flagged to catdef-strategist (2026-05-25-0900). (5) primer.md content ratification to implementer with /oagp-init addition request (2026-05-24-2300). (6) bind() v0.1 RATIFIED (2026-05-28-1000) -- interactive scope; all seven §7 items + two open questions resolved; code review found bounded authority is conventional-not-structural in v0.1. (7) agent-sdk v0.2 autonomous-dispatch direction (proposal + decision, commit 2207cc1) -- three-tier bounded-authority model: propose-only by construction (default) / explicit+audited Director elevation (overridable) / non-delegable dispatch (hard floor, no override, environmentally enforced); bind-event memo discipline resolved; fail-closed roledef resolution gated on roledef-strategist contract (Option A). REVIEWS: Microsoft AGT (runtime-layer governance; composes with OAGP at org-layer) + ETCLOVG harness survey (locates OAGP as the org-sub-layer of Governance (G); flags it as underdeveloped = OAGP's gap). IN FLIGHT: implementer building agent-sdk v0.2 per the decision's build directive + 7 conformance tests; implementer's charter v0.1.6 (graduation) entry + the agent-sdk package still uncommitted in their session. OPEN: (a) charter version reconciliation across sessions -- v0.1.6 (implementer graduation, pending) then v0.1.7 (my v0.2 decision); I deliberately left charter/CLAUDE.md untouched to avoid cross-session collision -- this needs reconciling when v0.1.6 lands; (b) consolidated pattern-promotion decision for THREE queued candidates (OAGP substrate is sufficient agent context; OAGP composes with runtime-policy toolkits; OAGP is the org-sub-layer of ETCLOVG Governance) -- recommend one decision, not three; (c) roledef-strategist URL-resolution contract reply (gates fail-closed roledef resolution); (d) canonical-orgs library residence reply still owed to orgdef-strategist (memos/2026-05-24-0900); (e) recommended_patterns.general still placeholder in charter (the three candidates would populate it); (f) outreach -- explicitly sequenced AFTER an empirical run_seat() demo per PO; (g) PO's 'workflows feature' question (2026-05-29) unresolved -- exploratory, possibly relevant to run_seat()/dispatch; not a blocked task. The stale 2026-05-24-1700 closeout (uncommitted) was a premature mid-session checkpoint; this memo is the canonical session record.",
+  "body_ref": "2026-05-29-1200--oagp-strategist--oagp-strategist--session-closeout-org-consolidation-oagp-init-bind-finalization.body.md",
+
+  "metadata": {
+    "drafted_by_session": "claude-opus-4-7, 2026-05-29 oagp-strategist chair (s:/projects/oagp-org)",
+    "scope_check": "Within oagp-strategist scope; closeout memo per /oagp-closeout SKILL.md Phase 1. from-seat-to-seat institutional capture. PO ratifies via merge (closeout content stands as draft regardless).",
+    "applies_principles": [
+      "feedback_substrate_is_workplace_not_documentation -- the closeout IS the institutional capture; no separate retrospective",
+      "seat-vs-incumbent -- from-seat-to-seat; the next oagp-strategist incumbent reads this on onboard",
+      "one-memo-per-session -- this supersedes the premature 1700 checkpoint; the session is one continuous arc"
+    ],
+    "session_commits": [
+      "v0.1.3 GitHub-org consolidation + MCP distribution v0.2 (+ 6 cross-spec memos)",
+      "v0.1.5 /oagp-init canonical promotion (+ sub-org idea memo + implementer coordination)",
+      "internal-URL cleanup; catdef.org PO-note forward-flag (1001f45); primer.md ratification (2 audit-chain commits)",
+      "e7e94de bind() v0.1 ratification",
+      "2207cc1 agent-sdk v0.2 autonomous-dispatch direction"
+    ],
+    "open_items_for_next_session": [
+      "charter v0.1.6 (implementer) -> v0.1.7 (v0.2 decision) reconciliation; charter/CLAUDE.md untouched this session to avoid cross-session collision",
+      "consolidated pattern-promotion decision for three candidates -> populate recommended_patterns.general",
+      "roledef-strategist URL-resolution contract reply (gates fail-closed roledef resolution)",
+      "canonical-orgs library residence reply owed to orgdef-strategist (2026-05-24-0900)",
+      "outreach -- after empirical run_seat() demo",
+      "PO 'workflows feature' question (2026-05-29) -- exploratory; possibly intersects run_seat()/dispatch"
+    ]
+  }
+}
