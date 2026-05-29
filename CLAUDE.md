@@ -100,10 +100,12 @@ Current as of the v0.1.8 charter reconciliation (2026-05-29). The queue originat
 - **bind()/agent-sdk v0.1** — graduated to [agent-sdk/](agent-sdk/) (Python package, 36 tests) + ratified for interactive scope (memos/2026-05-28-1000)
 - **agent-sdk v0.2 autonomous-dispatch direction** — three-tier bounded-authority model (propose-only by construction / explicit+audited Director elevation / non-delegable dispatch); decision on main
 - **agent-sdk v0.2 amendment** (2026-05-29) — compose with Claude Code Workflows as the Claude-Code dispatch backend; OAGP layer-positioning; Tier-3 composition-hazard tightening
+- **agent-sdk v0.2 governance core + §8 demo** (2026-05-29) — `run_seat()` + three tiers enforced structurally (commit 6628404, 94 tests); live WorkflowsBackend (3644bb6); propose-only dispatch demo validated (agent read substrate → filed proposals without editing); governance addendum ratified launcher-per-dispatch canonical + Tier-1-only-until-Tier-2-launcher-gated (decisions/proposal-agent-sdk-v0.2-governance-addendum-autonomous-dispatch-constraints.md)
+- **Consolidated pattern-promotion v1** (2026-05-29) — `recommended_patterns.general` populated with eight canonical patterns (charter v0.1.9), retiring the v0.1.0 `[DEFERRED]` placeholder (proposals/ + decisions/proposal-consolidated-pattern-promotion-v1.md)
 
 ### Active (strategist)
 
-- **Consolidated pattern-promotion decision** — 6 candidates queued; `recommended_patterns.general` stays placeholder pending it: (1) org-state-fork-for-time-travel; (2) async-organization positioning; (3) OAGP-substrate-is-sufficient-agent-context; (4) composes-with-runtime-policy-toolkits (AGT); (5) org-sub-layer-of-ETCLOVG-Governance; (6) dispatch-is-commodity-governance-is-value. Plus thingalog-strategist's separately-surfaced AI-PM/synthesis-agent seat + three-tier permission composition candidates (memos/2026-05-25-2000/2100)
+- **Pattern-promotion watch-list** — two candidates held pending more derivation (revisit, don't re-decide): thingalog AI-PM/synthesis-agent seat (ships ~1–2 months; memos/2026-05-25-2000/2100); three-tier permission composition (2 derivations, one short; arguably substrate-MCP-surface-shape → catdef/memodef family). Promotion is ongoing via the promotion-follows-adoption discipline as patterns earn it.
 - **Canonical-orgs library residence** — reply owed to orgdef-strategist (memos/2026-05-24-0900)
 - **Caliper local-conventions canonical work** — position-naming style; memos/inbox+read routing; proposals/ vs decisions/ separation
 - **Layer-positioning language** — land in README + primer.md (+ fourth "OAGP IS NOT" negation) per the v0.2 amendment; charter `vision`/`scope` placement is a separate ratifiable change, not folded into reconciliation
