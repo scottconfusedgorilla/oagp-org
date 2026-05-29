@@ -2,7 +2,7 @@
 
 This document is read by any Claude session entering oagp-org. It establishes the discipline that all seats in this org operate under.
 
-**Status:** v0.1.1 — oagp-strategist seat staffed 2026-05-23 under Director direction. Format-shape (structure, role boundaries, bounded-authority discipline) drafted by orgdef-strategist 2026-05-23. Pattern-shape content carried forward from the v0.1.0 draft and accepted-by-staffing as the seat's operating frame; eight-item inherited work queue under active strategist authorship, with specific decisions Director-merge-ratified per item.
+**Status:** v0.1.8 — oagp-strategist staffed 2026-05-23, oagp-implementer staffed 2026-05-24 (both AI seats; Director Scott holds ratification). On main: four canonical skills (`/oagp-bootstrap`, `/oagp-init`, `/oagp-onboard`, `/oagp-closeout`); skill-distribution v0.1 (oagp-org/skills/ residence + Claude Code install scripts) and v0.2 (family-level MCP at oagp.org/mcp + primer.md fallback); GitHub-org consolidation; agent-sdk bind() v0.1 (ratified, interactive scope). Active: agent-sdk v0.2 (autonomous dispatch; amended 2026-05-29 to compose with Claude Code Workflows rather than rebuild dispatch plumbing) + a consolidated pattern-promotion decision (6 candidates; `recommended_patterns.general` placeholder pending it). Public launch deferred by Director 2026-05-29 pending refinement. Charter reconciled to v0.1.8 on 2026-05-29 (folded in the previously-uncommitted v0.1.6/v0.1.7/v0.1.8 entries).
 
 ## Quick reference
 
@@ -86,25 +86,39 @@ Cross-spec coordination is via memos to the relevant -def-spec strategist. When 
 - **No vendor advocacy.** Equal-citizen treatment of all AI runtimes.
 - **Honest about limits.** When a question requires Director judgment beyond the seat's scope, say so plainly and surface the question.
 
-## Known work items (inherited from orgdef-spec hand-off)
+## Known work items
 
-Per the data-vs-pattern sharpening of 2026-05-23 ([orgdef-spec memos/2026-05-23-1100--thingalog-strategist--orgdef-strategist--handoff-addendum-data-vs-pattern.body.md](https://github.com/orgdef-spec/orgdef/blob/main/memos/2026-05-23-1100--thingalog-strategist--orgdef-strategist--handoff-addendum-data-vs-pattern.body.md)), the following items belong to oagp-strategist (seat staffed 2026-05-23):
+Current as of the v0.1.8 charter reconciliation (2026-05-29). The queue originated in the orgdef-spec hand-off (data-vs-pattern sharpening 2026-05-23, [orgdef memos/2026-05-23-1100](https://github.com/oagp-org/orgdef/blob/main/memos/2026-05-23-1100--thingalog-strategist--orgdef-strategist--handoff-addendum-data-vs-pattern.body.md)) and has grown through subsequent sessions. "On main" = drafted + committed + pushed under Director direction (ratified-by-merge); the Director runs these sessions and directs each commit.
 
-- **Canonical promotion of `/oagp-bootstrap` + `/oagp-onboard` pair** — drafted 2026-05-23 ([proposals/oagp-adoption-cycle-canonical-promotion.md](proposals/oagp-adoption-cycle-canonical-promotion.md) + [decisions/proposal-oagp-adoption-cycle-canonical-promotion.md](decisions/proposal-oagp-adoption-cycle-canonical-promotion.md)); awaiting Director ratification via merge
-- **Canonical adoption-cycle skill distribution v0.1** — drafted 2026-05-24 ([proposals/canonical-adoption-cycle-skill-distribution-v0.1.md](proposals/canonical-adoption-cycle-skill-distribution-v0.1.md) + [decisions/proposal-canonical-adoption-cycle-skill-distribution-v0.1.md](decisions/proposal-canonical-adoption-cycle-skill-distribution-v0.1.md)); migrates skill residence to oagp-org/skills/ + adds Claude Code install scripts; scope amended 2026-05-24 to include `/oagp-closeout`; awaiting Director ratification
-- **Canonical promotion of `/oagp-closeout`** — drafted 2026-05-24 ([proposals/oagp-closeout-canonical-promotion.md](proposals/oagp-closeout-canonical-promotion.md) + [decisions/proposal-oagp-closeout-canonical-promotion.md](decisions/proposal-oagp-closeout-canonical-promotion.md)); session-cycle closing skill companion to `/oagp-onboard`; awaiting Director ratification
-- **Canonical promotion of `/oagp-init`** — drafted 2026-05-24 ([proposals/oagp-init-canonical-promotion.md](proposals/oagp-init-canonical-promotion.md) + [decisions/proposal-oagp-init-canonical-promotion.md](decisions/proposal-oagp-init-canonical-promotion.md)); founding-side skill (create new OAGP-shaped org from scratch) companion to `/oagp-bootstrap`; folder-only by default with optional git; sub-org case deferred to forward-reference idea memo ([memos/2026-05-24-2200](memos/2026-05-24-2200--oagp-strategist--oagp-strategist--sub-org-governance-implications-idea.body.md)); install-script update coordination memo filed to oagp-implementer; awaiting Director ratification
-- **Bootstrap-session transcript-position-tagging convention** — resolved 2026-05-24 by the closeout canonicalization decision for the canonical case; convention canonically encoded in [skills/oagp-closeout/SKILL.md](skills/oagp-closeout/SKILL.md) Phase 2 table (staffed-seat → seat id; bootstrap → `<orgname>-bootstrap-helper`; unattached → `unattached-ai`); edge cases (multi-org, mid-session role transitions, multi-AI sessions) flagged for future convention decisions if they surface
-- **Org-state-fork-for-time-travel property** — pattern-promotion candidate; substrate-agnostic property; empirically validated 2026-05-23 by bind() + agent-view demo
-- **Async-organization positioning** — pattern + agent-runtime integration; architectural commitment candidate
-- **Caliper local-conventions canonical work** — three sub-questions (position-naming style; memos/inbox+read routing; proposals/ vs decisions/ separation)
-- **OAGP plugin packaging strategic call** — cross-vendor positioning implications; v0.1 distribution decision (2026-05-24) explicitly scheduled this as v0.3 (after substrate-neutral primer v0.2)
-- **Cross-runtime delivery package coordination** — Claude Code, C4C, claude.ai, ChatGPT, Gemini, Perplexity, first-message primer; partially addressed by v0.1 distribution decision (Claude Code path); substantially addressed by v0.2 distribution decision (family-level MCP at oagp.org/mcp + primer.md fallback); v0.3 (Claude Code plugin) remains scheduled as last per cross-vendor red line ordering
-- **oagp.org canonical hosting** — substantially addressed by v0.2 (oagp.org/mcp + oagp.org/primer.md); oagp-online repo moved to oagp-org/oagp.org 2026-05-24; canonical web content (skills, charter, primer, MCP) ships from that repo; DNS + hosting infrastructure remains PO/Director-scoped forward work
-- **Canonical adoption-cycle skill distribution v0.2** — drafted 2026-05-24 ([proposals/canonical-adoption-cycle-skill-distribution-v0.2.md](proposals/canonical-adoption-cycle-skill-distribution-v0.2.md) + [decisions/proposal-canonical-adoption-cycle-skill-distribution-v0.2.md](decisions/proposal-canonical-adoption-cycle-skill-distribution-v0.2.md)); ratifies memodef-strategist's 2026-05-21 architectural lean: single MCP at oagp.org/mcp with per-spec namespaced tools; read-only convenience cache; canonical content stays in repos; implementer-seat (vacant) executes build; awaiting Director ratification
-- **GitHub-org consolidation 2026-05-24** — three OAGP-internal -defs moved under oagp-org (roledef, orgdef, memodef); catdef stays standalone as substrate-agnostic spec; oagp-online moved to oagp-org/oagp.org; openmemo-spec archived as historical dead-end; cross-spec FYI memos filed to all four -def strategists (2026-05-24-1800/1801/1802/1803); follow-up confirmation memo to memodef-strategist on MCP ratification (2026-05-24-1900)
-- **Implementer-seat staffing** — forward-work queue is now substantial (MCP server build, primer.md authoring, v0.3 plugin packaging eventually, agent-sdk graduation from scratch per bind/agent-sdk memo, oagp.org site content); strategist-recommended next staffing call when PO is ready
-- **Canonical-orgs library residence** — coordination request from orgdef-strategist (memos/2026-05-24-0900); reply memo forthcoming; structurally parallel to the skill-residence call resolved by the v0.1 distribution decision
-- **bind() + agent-sdk graduation** — recommendation memo 2026-05-23-1600 from thingalog-strategist; reading + API ratification pending
+### On main (ratified-by-merge)
 
-Full inventory + analysis input in [memos/](memos/) inbox (pointer memos referencing originating orgdef-spec memos + withdrawn orgdef-strategist artifacts).
+- **Four canonical skills** — `/oagp-bootstrap` + `/oagp-onboard` (2026-05-23), `/oagp-closeout` (2026-05-24), `/oagp-init` (2026-05-24); proposals + decisions in [proposals/](proposals/) + [decisions/](decisions/)
+- **Skill distribution v0.1** (residence migration to [skills/](skills/) + Claude Code install scripts) and **v0.2** (family-level MCP at oagp.org/mcp + primer.md fallback, ratifying memodef-strategist's 2026-05-21 architectural lean)
+- **GitHub-org consolidation** — roledef/orgdef/memodef under oagp-org; catdef standalone; oagp-online → oagp-org/oagp.org; openmemo-spec archived; cross-spec FYI memos to the four -def strategists
+- **Transcript-position-tagging convention** (canonical case) — encoded in [skills/oagp-closeout/SKILL.md](skills/oagp-closeout/SKILL.md) Phase 2 (staffed-seat → seat id; bootstrap → `<orgname>-bootstrap-helper`; unattached → `unattached-ai`); edge cases (multi-org, mid-session role transitions, multi-AI sessions) deferred
+- **oagp.org site refresh** (implementer P0; builds 002→006; primer.md live)
+- **bind()/agent-sdk v0.1** — graduated to [agent-sdk/](agent-sdk/) (Python package, 36 tests) + ratified for interactive scope (memos/2026-05-28-1000)
+- **agent-sdk v0.2 autonomous-dispatch direction** — three-tier bounded-authority model (propose-only by construction / explicit+audited Director elevation / non-delegable dispatch); decision on main
+- **agent-sdk v0.2 amendment** (2026-05-29) — compose with Claude Code Workflows as the Claude-Code dispatch backend; OAGP layer-positioning; Tier-3 composition-hazard tightening
+
+### Active (strategist)
+
+- **Consolidated pattern-promotion decision** — 6 candidates queued; `recommended_patterns.general` stays placeholder pending it: (1) org-state-fork-for-time-travel; (2) async-organization positioning; (3) OAGP-substrate-is-sufficient-agent-context; (4) composes-with-runtime-policy-toolkits (AGT); (5) org-sub-layer-of-ETCLOVG-Governance; (6) dispatch-is-commodity-governance-is-value. Plus thingalog-strategist's separately-surfaced AI-PM/synthesis-agent seat + three-tier permission composition candidates (memos/2026-05-25-2000/2100)
+- **Canonical-orgs library residence** — reply owed to orgdef-strategist (memos/2026-05-24-0900)
+- **Caliper local-conventions canonical work** — position-naming style; memos/inbox+read routing; proposals/ vs decisions/ separation
+- **Layer-positioning language** — land in README + primer.md (+ fourth "OAGP IS NOT" negation) per the v0.2 amendment; charter `vision`/`scope` placement is a separate ratifiable change, not folded into reconciliation
+
+### Active (implementer-execution)
+
+- **agent-sdk v0.2 BUILD** — per the amended directive (compose over Workflows on Claude Code; keep `run_seat()` the cross-vendor abstraction; preserve roledef→AgentDefinition translation, time-travel, bind-event memos, three-tier authority); empirical `run_seat()` demo is the milestone
+- **roledef URL-resolution contract** (memos/2026-05-25-0001) — awaits roledef-strategist; gates fail-closed roledef resolution in v0.2
+- **v0.3 Claude Code plugin packaging** — scheduled last per cross-vendor red line ordering
+
+### Deferred / Director-scoped (surfaced, not strategist calls)
+
+- **Adoption traction / v1 criterion (d)** (one non-spec real-org adopter) — Director deprioritized public launch 2026-05-29 ("more refinement before public"); revisit pre-launch
+- **oagp.org DNS + hosting infrastructure**
+- **Job specialization** (embedded `roledef:Job` items) for staffed seats — deferred per precedent
+- **Sub-org governance** — forward-reference idea memo (memos/2026-05-24-2200); hierarchical-vs-flat OAGP question
+
+Full inter-position trail in [memos/](memos/) (newest-first); ratified commitments in [decisions/](decisions/).
