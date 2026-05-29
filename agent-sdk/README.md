@@ -48,6 +48,33 @@ Parameters and defaults are documented in [src/oagp_agent_sdk/bind.py](src/oagp_
 
 Dataclass containing everything the caller needs to know about the bind: file path, agent name, dispatch hint, position + roledef provenance (id, version, source: `"url"` or `"embedded"`, URL if used).
 
+### `run_seat(orgdef_path, position_id, *, ...) -> DispatchRecord` (v0.2)
+
+Autonomous dispatch built on `bind()`: dispatch a bound agent as an **unattended** session where bounded authority is **structural**, not prompt-level. Returns a `DispatchRecord` (agent name, org-state SHA, tier, granted authority, toolset, bind-event memo path, backend, dispatch handle).
+
+**Three tiers** (per the v0.2 build-direction; *"we provide a gun, you provide a foot; the gun ships with instructions not to aim at the foot; and even then the gun can never give instructions to another gun"*):
+
+- **Tier 1 — propose-only by construction (default).** The default toolset contains no commit/push/merge/tag/release-capable tools (in Claude Code, that capability rides on `Bash`). The agent drafts files; a human commits. Requesting a Director-capable tool at Tier 1 raises `Tier1ViolationError` — the agent is *constructed* unable, not asked to refrain.
+- **Tier 2 — explicit, audited Director elevation.** `grant_director_actions=["commit", "push", ...]` adds the capable tools (hard layer) **and** fires a bind-event memo recording the grant (audit layer). Never silent; never prompt-only.
+- **Tier 3 — non-delegable dispatch (hard floor, no override).** No bound agent may dispatch/bind/elevate another. Enforced environmentally: `bind()` / `run_seat()` refuse when the `OAGP_BOUND_AGENT` marker is present in the environment (set by the dispatch backend), with package-absence as a deployment-layer backstop.
+
+Autonomous-mode roledef resolution is **fail-closed**: a URL-fetch failure aborts (`RoledefResolutionError`) unless `allow_embedded_fallback=True`. Interim default pending the roledef-strategist URL-resolution contract ([memos/2026-05-25-0001](https://github.com/oagp-org/oagp/blob/main/memos/2026-05-25-0001--oagp-implementer--roledef-strategist--url-resolution-contract-for-canonical-roledefs.body.md)).
+
+```python
+from oagp_agent_sdk import run_seat
+
+# Tier 1 (default): propose-only autonomous dispatch
+record = run_seat(
+    orgdef_path="path/to/org/<orgname>-organization.opencatalog",
+    position_id="security-tester",
+    brief="Static-review the auth pipeline; file findings as a proposal memo.",
+)
+assert record.tier == 1                 # no Bash; cannot push/merge
+assert record.bind_event_memo.exists()  # audit trail for the unattended run
+```
+
+**Dispatch backend.** `run_seat()` is the cross-vendor seam. On Claude Code it composes over the native Workflows-class dispatcher (live wiring deferred — current default is `StubBackend`, which records dispatch intent without launching; the governance core is fully exercisable against it).
+
 ## Empirical lessons (encoded in defaults)
 
 Six things learned from the prototype run against thingalog 2026-05-16; preserved as load-bearing defaults in `bind()` and documented at [memos/2026-05-23-1600 §5](https://github.com/oagp-org/oagp/blob/main/memos/2026-05-23-1600--thingalog-strategist--oagp-strategist--bind-and-agent-view-empirically-validated-recommend-graduation.body.md):
@@ -61,19 +88,21 @@ Six things learned from the prototype run against thingalog 2026-05-16; preserve
 
 ## Status
 
-**v0.1 — graduated 2026-05-24** from prototype at `s:/scratch/oagp-agent-prototype/` per [thingalog-strategist's recommendation memo (2026-05-23-1600)](https://github.com/oagp-org/oagp/blob/main/memos/2026-05-23-1600--thingalog-strategist--oagp-strategist--bind-and-agent-view-empirically-validated-recommend-graduation.body.md). Awaiting oagp-strategist ratification on the v0.1 API surface and the seven §7 decisions from the recommendation memo.
+**v0.2 — autonomous-dispatch governance core, 2026-05-29.** `run_seat()` + the three-tier structural bounded-authority model + bind-event memos + fail-closed roledef resolution, built per the [v0.2 consolidated build-direction](https://github.com/oagp-org/oagp/blob/main/memos/2026-05-29-1300--oagp-strategist--oagp-implementer--agent-sdk-v0.2-consolidated-build-direction.body.md). Conformance tests 1–7 + 9 pass against `StubBackend`; test 8 (live Workflows delegation) is deferred with the backend wiring.
 
-Empirical proof: 2026-05-23 time-travel engagement (thingalog 2026-05-16 snapshot, bound as `security-tester`) surfaced C-1 (photo moderation absence) + H-1 (admin JWT not validated) findings against current main — both directly actionable.
+**v0.1 — graduated 2026-05-24** from prototype; **ratified 2026-05-28** by oagp-strategist (interactive scope; bounded authority by supervision-convention). Empirical proof: 2026-05-23 time-travel engagement (thingalog 2026-05-16 snapshot, bound as `security-tester`) surfaced C-1 + H-1 findings against current main.
 
 ## Roadmap
 
-| Item | When |
+| Item | Status |
 |---|---|
-| CLI dispatch wrapper (`claude --bg --agent <name>`) | When first unattended use case lands |
-| `run_seat()` / scheduler | After CLI dispatch |
-| Bind-event memo filing | Triggered when bind() runs unattended, when multiple operators share runtime, or when bound agents make externally-visible changes |
+| `run_seat()` autonomous dispatch + three tiers | **Done (v0.2 core)** |
+| Bind-event memo filing | **Done (v0.2)** — every autonomous dispatch emits one |
+| Fail-closed roledef resolution | **Done (v0.2 interim)** — abort on URL failure absent explicit fallback |
+| Live Workflows-class dispatch backend (Claude Code) | Deferred follow-up; conformance test 8 gated on it |
+| Empirical `run_seat()` demo (unattended propose-only run filing proposal-memos) | Next milestone (needs live backend) |
+| URL-resolution contract for canonical roledefs (caching, versioning, integrity) | Awaiting roledef-strategist reply ([memos/2026-05-25-0001](https://github.com/oagp-org/oagp/blob/main/memos/2026-05-25-0001--oagp-implementer--roledef-strategist--url-resolution-contract-for-canonical-roledefs.body.md)); swap interim fail-closed default for the ratified contract |
 | Caller-provided inline roledef override | When a use case surfaces (none yet) |
-| URL-resolution contract for canonical roledefs (caching, versioning, fallback) | Coordination memo with roledef-strategist filed on graduation |
 
 ## Tests
 

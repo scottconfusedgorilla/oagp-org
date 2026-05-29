@@ -40,6 +40,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Literal
 
+from .guard import assert_dispatch_allowed
+
 
 # Map roledef id -> color for visual identification in the agent view panel.
 # Anything not in this map gets `cyan` (see bind() color fallback).
@@ -52,6 +54,12 @@ _ROLE_COLOR: dict[str, str] = {
 
 
 RoledefSource = Literal["url", "embedded"]
+
+
+class RoledefResolutionError(RuntimeError):
+    """Raised in fail-closed mode when a roledef URL fetch fails and embedded
+    fallback is not explicitly permitted. Prevents an autonomous agent from
+    silently booting with the wrong identity."""
 
 
 @dataclass
@@ -89,23 +97,45 @@ def _find_position(orgdef: dict[str, Any], position_id: str) -> dict[str, Any]:
     )
 
 
-def _resolve_roledef(position: dict[str, Any]) -> tuple[dict[str, Any], RoledefSource, str | None]:
-    """Return (roledef, source, url). Tries URL fetch first; falls back to
-    the position's embedded `job_definition` if URL unavailable or fails."""
+def _resolve_roledef(
+    position: dict[str, Any],
+    *,
+    fail_closed: bool = False,
+    allow_embedded_fallback: bool = True,
+) -> tuple[dict[str, Any], RoledefSource, str | None]:
+    """Return (roledef, source, url). Tries URL fetch first.
+
+    Resolution modes:
+    - fail_closed=False (default; v0.1 interactive behavior): URL fetch failure
+      prints a warning and falls back to the embedded `job_definition`.
+    - fail_closed=True (autonomous mode): URL fetch failure raises
+      RoledefResolutionError UNLESS allow_embedded_fallback=True, in which case
+      it falls back to embedded with a warning.
+
+    A position that declares ONLY an embedded job_definition (no URL) always
+    resolves to embedded — that is the declared source, not a silent fallback.
+    """
     role_def = position.get("role_definition") or {}
     url = role_def.get("url")
+    embedded = role_def.get("job_definition")
     if url:
         try:
             req = urllib.request.Request(
                 url,
-                headers={"User-Agent": "oagp-agent-sdk/0.1 (+https://oagp.org)"},
+                headers={"User-Agent": "oagp-agent-sdk/0.2 (+https://oagp.org)"},
             )
             with urllib.request.urlopen(req, timeout=10) as resp:
                 return json.loads(resp.read().decode("utf-8")), "url", url
         except Exception as e:
+            if fail_closed and not allow_embedded_fallback:
+                raise RoledefResolutionError(
+                    f"Roledef URL fetch failed ({url}) in fail-closed mode and "
+                    f"embedded fallback is not permitted. Pass "
+                    f"allow_embedded_fallback=True to opt into the embedded copy, "
+                    f"or fix the URL. Original error: {e}"
+                ) from e
             print(f"[bind] URL fetch failed ({url}): {e}; trying embedded fallback")
 
-    embedded = role_def.get("job_definition")
     if embedded:
         return embedded, "embedded", url
 
@@ -231,6 +261,8 @@ def bind(
     max_turns: int | None = None,
     color: str | None = None,
     extra_context: str = "",
+    roledef_fail_closed: bool = False,
+    allow_embedded_fallback: bool = True,
 ) -> BindResult:
     """Bind an OAGP position to a Claude Code subagent file.
 
@@ -283,10 +315,15 @@ def bind(
         position has neither a fetchable URL nor an embedded
         ``job_definition`` for the roledef.
     """
+    assert_dispatch_allowed("bind")
     orgdef_path = Path(orgdef_path).resolve()
     orgdef = _load_orgdef(orgdef_path)
     position = _find_position(orgdef, position_id)
-    roledef, source, url = _resolve_roledef(position)
+    roledef, source, url = _resolve_roledef(
+        position,
+        fail_closed=roledef_fail_closed,
+        allow_embedded_fallback=allow_embedded_fallback,
+    )
 
     org_meta = next(
         (i for i in orgdef.get("items", []) if i.get("type") == "orgdef:Organization"),

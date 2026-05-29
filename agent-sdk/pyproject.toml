@@ -1,7 +1,7 @@
 [project]
 name = "oagp-agent-sdk"
-version = "0.1.0"
-description = "OAGP agent-sdk: bind OAGP positions to runnable Claude Code subagents."
+version = "0.2.0"
+description = "OAGP agent-sdk: bind OAGP positions to runnable Claude Code subagents; autonomous dispatch with structural bounded authority."
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
